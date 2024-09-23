@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex gap-2 items-center">
+    <div className="flex items-center gap-2">
       <CakeSlice className="size-8 text-white" />
-      <h1 className="text-white text-2xl font-bold">Velvet</h1>
+      <h1 className="text-2xl font-bold text-white">Velvet</h1>
     </div>
   )
 }
