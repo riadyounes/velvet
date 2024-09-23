@@ -2,6 +2,8 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 
+import { Header } from '@/components/header'
+
 export const metadata: Metadata = {
   title: {
     template: '%s | Velvet',
@@ -17,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body>
+        <Header />
+
+        <main className="mx-auto w-full max-w-[1200px] py-4">{children}</main>
+      </body>
     </html>
   )
 }
