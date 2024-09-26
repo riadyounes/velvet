@@ -1,4 +1,13 @@
 import { CakeSlice } from 'lucide-react'
+import Link from 'next/link'
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from './ui/dropdown-menu'
 
 export function Header() {
   return (
@@ -8,7 +17,22 @@ export function Header() {
           <CakeSlice className="size-8 text-white" />
           <h1 className="text-2xl font-bold text-white">Velvet</h1>
         </div>
-        <div>navegação</div>
+        <DropdownMenu>
+          <DropdownMenuTrigger className="text-white">Open</DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem asChild>
+              <Link href="/menu">Cardápio</Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem asChild>
+              <Link href="/about">Sobre</Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem asChild>
+              <Link href="/contact">Contato</Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </div>
   )
