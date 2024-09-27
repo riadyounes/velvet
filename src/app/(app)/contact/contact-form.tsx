@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { toast } from '@/hooks/use-toast'
 
 export function ContactForm() {
   const [name, setName] = useState('')
@@ -27,13 +26,6 @@ export function ContactForm() {
     // Redirecionar para o WhatsApp
     window.open(whatsappURL, '_blank')
 
-    // Exibir um toast de sucesso
-    toast({
-      title: 'Redirecionando para o WhatsApp',
-      description:
-        'Obrigado por entrar em contato. Você será redirecionado para o WhatsApp para enviar sua mensagem!',
-      className: 'bg-green-500 text-white',
-    })
     setName('')
     setEmail('')
     setMessage('')
