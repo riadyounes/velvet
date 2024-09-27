@@ -13,10 +13,25 @@ export function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Aqui você adicionaria a lógica para enviar o formulário
+    // Construir a mensagem formatada
+    const whatsappMessage = `Olá! 😊 Meu nome é ${name} e gostaria de falar com a equipe da Velvet. 📧 Meu e-mail é ${email}.
+
+    💬 Mensagem: ${message}
+
+    Aguardo o retorno e agradeço desde já! 🙌`
+
+    // URL do WhatsApp com o número de telefone e mensagem
+    const phoneNumber = '5511999999999'
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`
+
+    // Redirecionar para o WhatsApp
+    window.open(whatsappURL, '_blank')
+
+    // Exibir um toast de sucesso
     toast({
-      title: 'Mensagem Enviada',
-      description: 'Obrigado por entrar em contato. Responderemos em breve!',
+      title: 'Redirecionando para o WhatsApp',
+      description:
+        'Obrigado por entrar em contato. Você será redirecionado para o WhatsApp para enviar sua mensagem!',
       className: 'bg-green-500 text-white',
     })
     setName('')
