@@ -2,7 +2,9 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 
+import Footer from '@/components/footer'
 import { Header } from '@/components/header'
+import { Toaster } from '@/components/ui/toaster'
 
 export const metadata: Metadata = {
   title: {
@@ -18,11 +20,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className="h-full" suppressHydrationWarning>
+      <Toaster />
+      <body className="flex min-h-screen flex-col">
         <Header />
-
-        <main className="mx-auto w-full max-w-[1200px] py-4">{children}</main>
+        <main className="mx-auto w-full max-w-[1200px] flex-grow py-4">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   )
