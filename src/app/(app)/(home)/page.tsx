@@ -53,7 +53,14 @@ export default function HomePage() {
         <h2 className="mb-6 text-center text-3xl font-semibold">
           Nossos Destaques
         </h2>
-        <Carousel className="mx-auto w-full">
+        <Carousel
+          className="mx-auto w-full"
+          opts={{
+            loop: true,
+            dragFree: true,
+            duration: 400,
+          }}
+        >
           <CarouselContent>
             {featuredProducts.map((product, index) => (
               <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={index}>

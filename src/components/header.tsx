@@ -1,6 +1,7 @@
 import { AlignJustify, CakeSlice } from 'lucide-react'
 import Link from 'next/link'
 
+import { NavLink } from './nav-link'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,7 +12,7 @@ import {
 
 export function Header() {
   return (
-    <div className="w-full bg-primary">
+    <div className="bg-brand-500 w-full">
       <div className="mx-auto flex min-h-20 max-w-[1200px] items-center justify-between p-6">
         <div className="flex items-center gap-2">
           <CakeSlice className="size-8 text-white" />
@@ -19,15 +20,24 @@ export function Header() {
         </div>
 
         <nav className="hidden gap-8 lg:flex">
-          <Link href="/menu" className="text-white">
+          <NavLink
+            href="/menu"
+            className="hover:text-brand-300 text-brand-200 font-medium transition-colors data-[current=true]:text-white"
+          >
             Cardápio
-          </Link>
-          <Link href="/about" className="text-white">
+          </NavLink>
+          <NavLink
+            href="/about"
+            className="hover:text-brand-300 text-brand-200 font-medium transition-colors data-[current=true]:text-white"
+          >
             Sobre
-          </Link>
-          <Link href="/contact" className="text-white">
+          </NavLink>
+          <NavLink
+            href="/contact"
+            className="hover:text-brand-300 text-brand-200 font-medium transition-colors data-[current=true]:text-white"
+          >
             Contato
-          </Link>
+          </NavLink>
         </nav>
 
         <DropdownMenu>

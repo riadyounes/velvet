@@ -37,11 +37,17 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start">
             <h3 className="mb-4 text-lg font-semibold">Entre em contato</h3>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-600 hover:text-primary">
+              <Link
+                href="#"
+                className="hover:text-brand-500 text-gray-600 transition-colors"
+              >
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-gray-600 hover:text-primary">
+              <Link
+                href="#"
+                className="hover:text-brand-500 text-gray-600 transition-colors"
+              >
                 <Phone className="h-6 w-6" />
                 <span className="sr-only">WhatsApp</span>
               </Link>
@@ -54,26 +60,26 @@ export default function Footer() {
             <nav className="flex flex-col space-y-2">
               <NavLink
                 href="/"
-                className="font-medium text-gray-600 data-[current=true]:text-primary"
+                className="hover:text-brand-300 data-[current=true]:text-brand-500 font-medium text-gray-600"
               >
                 Home
               </NavLink>
               <NavLink
                 href="/about"
-                className="font-medium text-gray-600 data-[current=true]:text-primary"
+                className="hover:text-brand-300 data-[current=true]:text-brand-500 font-medium text-gray-600"
               >
                 Sobre nós
               </NavLink>
               <NavLink
                 href="/menu"
-                className="font-medium text-gray-600 data-[current=true]:text-primary"
+                className="hover:text-brand-300 data-[current=true]:text-brand-500 font-medium text-gray-600"
               >
                 Cardápio
               </NavLink>
 
               <NavLink
                 href="/contact"
-                className="font-medium text-gray-600 data-[current=true]:text-primary"
+                className="hover:text-brand-300 data-[current=true]:text-brand-500 font-medium text-gray-600"
               >
                 Contato
               </NavLink>
