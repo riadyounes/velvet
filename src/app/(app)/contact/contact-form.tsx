@@ -32,7 +32,9 @@ export function ContactForm() {
   }
   return (
     <div>
-      <h2 className="mb-4 text-2xl font-semibold">Envie-nos uma mensagem</h2>
+      <h2 className="mb-4 text-2xl font-semibold text-brand-800">
+        Envie-nos uma mensagem
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label

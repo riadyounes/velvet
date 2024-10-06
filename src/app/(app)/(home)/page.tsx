@@ -43,14 +43,16 @@ export default function HomePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <header className="mb-12 text-center">
-        <h1 className="mb-4 text-4xl font-bold">Bem-vindo à Velvet</h1>
+        <h1 className="mb-4 text-4xl font-bold text-brand-800">
+          Bem-vindo à Velvet
+        </h1>
         <p className="text-xl text-gray-600">
           Bolos artesanais que encantam todos os sentidos
         </p>
       </header>
 
       <section className="mb-16">
-        <h2 className="mb-6 text-center text-3xl font-semibold">
+        <h2 className="mb-6 text-center text-3xl font-semibold text-brand-800">
           Nossos Destaques
         </h2>
         <Carousel
@@ -58,7 +60,6 @@ export default function HomePage() {
           opts={{
             loop: true,
             dragFree: true,
-            duration: 400,
           }}
         >
           <CarouselContent>
@@ -91,14 +92,16 @@ export default function HomePage() {
           <CarouselNext className="hidden sm:flex" />
         </Carousel>
         <div className="mt-8 text-center">
-          <Link href="/cardapio">
+          <Link href="/menu">
             <Button>Ver Cardápio Completo</Button>
           </Link>
         </div>
       </section>
 
       <section className="mb-16">
-        <h2 className="mb-6 text-center text-3xl font-semibold">Sobre Nós</h2>
+        <h2 className="mb-6 text-center text-3xl font-semibold text-brand-800">
+          Sobre Nós
+        </h2>
         <div className="flex flex-col items-center gap-8 md:flex-row">
           <div className="md:w-1/2">
             <Image
@@ -116,7 +119,7 @@ export default function HomePage() {
               deslumbrantes. Desde 2010, temos o prazer de adoçar os momentos
               especiais de nossos clientes com nossas criações artesanais.
             </p>
-            <Link href="/sobre">
+            <Link href="/about">
               <Button variant="outline">Conheça Nossa História</Button>
             </Link>
           </div>
@@ -124,7 +127,7 @@ export default function HomePage() {
       </section>
 
       <section className="mb-16">
-        <h2 className="mb-6 text-center text-3xl font-semibold">
+        <h2 className="mb-6 text-center text-3xl font-semibold text-brand-800">
           Bolos de Casamento
         </h2>
         <div className="relative mb-6 h-96">
@@ -148,17 +151,17 @@ export default function HomePage() {
       </section>
 
       <section>
-        <h2 className="mb-6 text-center text-3xl font-semibold">
+        <h2 className="mb-6 text-center text-3xl font-semibold text-brand-800">
           Entre em Contato
         </h2>
         <div className="rounded-lg bg-gray-100 p-8">
           <p className="mb-4 text-center text-gray-600">
-            Estamos aqui para tornar sua experiência com a Velvet ainda mais
-            doce. Não hesite em nos contatar para pedidos especiais, dúvidas ou
-            feedback.
+            Estamos aqui para tornar sua experiência com a Velvet bolo ainda
+            mais doce. Não hesite em nos contatar para pedidos especiais,
+            dúvidas ou feedback.
           </p>
           <div className="flex justify-center space-x-4">
-            <Link href="/contato">
+            <Link href="/contact">
               <Button>Fale Conosco</Button>
             </Link>
           </div>

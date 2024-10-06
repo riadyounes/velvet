@@ -1,4 +1,5 @@
-import { AlignJustify, CakeSlice } from 'lucide-react'
+import { AlignJustify } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { NavLink } from './nav-link'
@@ -12,29 +13,33 @@ import {
 
 export function Header() {
   return (
-    <div className="bg-brand-500 w-full">
+    <div className="w-full bg-brand-500">
       <div className="mx-auto flex min-h-20 max-w-[1200px] items-center justify-between p-6">
-        <div className="flex items-center gap-2">
-          <CakeSlice className="size-8 text-white" />
-          <h1 className="text-2xl font-bold text-white">Velvet</h1>
-        </div>
+        <Link href="/">
+          <Image
+            src="/logo-velvet.svg"
+            alt="Logo velvet bolo"
+            width={120}
+            height={17}
+          />
+        </Link>
 
         <nav className="hidden gap-8 lg:flex">
           <NavLink
             href="/menu"
-            className="hover:text-brand-300 text-brand-200 font-medium transition-colors data-[current=true]:text-white"
+            className="font-medium text-brand-200 transition-colors hover:text-brand-300 data-[current=true]:text-white"
           >
             Cardápio
           </NavLink>
           <NavLink
             href="/about"
-            className="hover:text-brand-300 text-brand-200 font-medium transition-colors data-[current=true]:text-white"
+            className="font-medium text-brand-200 transition-colors hover:text-brand-300 data-[current=true]:text-white"
           >
             Sobre
           </NavLink>
           <NavLink
             href="/contact"
-            className="hover:text-brand-300 text-brand-200 font-medium transition-colors data-[current=true]:text-white"
+            className="font-medium text-brand-200 transition-colors hover:text-brand-300 data-[current=true]:text-white"
           >
             Contato
           </NavLink>

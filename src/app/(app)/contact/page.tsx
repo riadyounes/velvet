@@ -10,21 +10,23 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="mb-8 text-center text-4xl font-bold">Contate a Velvet</h1>
+      <h1 className="mb-8 text-center text-4xl font-bold text-brand-800">
+        Contate a Velvet Bolo
+      </h1>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <ContactForm />
         <div>
-          <h2 className="mb-4 text-2xl font-semibold">
+          <h2 className="mb-4 text-2xl font-semibold text-brand-800">
             Informações de contato
           </h2>
           <div className="space-y-4">
             <div className="flex items-center">
-              <CakeSlice className="text-brand-500 mr-2 h-5 w-5" />
+              <CakeSlice className="mr-2 h-5 w-5 text-brand-500" />
               <span>Velvet bolo</span>
             </div>
             <div className="flex items-center">
-              <Phone className="text-brand-500 mr-2 h-5 w-5" />
+              <Phone className="mr-2 h-5 w-5 text-brand-500" />
               <span>(11) 1234-5678</span>
             </div>
             <div className="flex items-center">

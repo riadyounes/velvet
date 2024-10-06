@@ -7,7 +7,7 @@ import { Header } from '@/components/header'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Velvet',
+    template: '%s | Velvet bolo',
     default: 'Velvet',
   },
   description: 'Bem-vindo ao Velvet, a sua loja de bolos deliciosos.',

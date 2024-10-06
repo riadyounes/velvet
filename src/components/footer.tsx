@@ -1,52 +1,48 @@
 import { Instagram, Phone } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { NavLink } from './nav-link'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 py-12">
+    <footer className="bg-brand-500 py-12">
       <div className="mx-auto max-w-[1200px] px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Column 1: Company Logo */}
           <div className="flex flex-col items-center md:items-start">
             <Link href="/" className="flex items-center space-x-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-8 w-8 text-primary"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-                <line x1="9" y1="9" x2="9.01" y2="9" />
-                <line x1="15" y1="9" x2="15.01" y2="9" />
-              </svg>
-              <span className="text-2xl font-bold text-primary">YourLogo</span>
+              <Image
+                src="/logo-velvet.svg"
+                alt="Logo velvet bolo"
+                width={200}
+                height={80}
+              />
             </Link>
-            <p className="mt-2 text-sm text-gray-600">
-              Your company slogan or brief description goes here.
+            <p className="mt-2 text-sm text-gray-100">
+              Na Velvet Bolo, cada fatia é uma celebração! Com ingredientes
+              selecionados e receitas feitas com carinho, nossos bolos são o
+              toque doce que transforma qualquer momento em uma experiência
+              inesquecível.
             </p>
           </div>
 
           {/* Column 2: Social Media Links */}
           <div className="flex flex-col items-center md:items-start">
-            <h3 className="mb-4 text-lg font-semibold">Entre em contato</h3>
+            <h3 className="mb-4 text-lg font-semibold text-gray-100">
+              Entre em contato
+            </h3>
             <div className="flex space-x-4">
               <Link
                 href="#"
-                className="hover:text-brand-500 text-gray-600 transition-colors"
+                className="text-gray-100 transition-colors hover:text-brand-300"
               >
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
                 href="#"
-                className="hover:text-brand-500 text-gray-600 transition-colors"
+                className="text-gray-100 transition-colors hover:text-brand-300"
               >
                 <Phone className="h-6 w-6" />
                 <span className="sr-only">WhatsApp</span>
@@ -56,30 +52,32 @@ export default function Footer() {
 
           {/* Column 3: Navigation Menu */}
           <div className="flex flex-col items-center md:items-start">
-            <h3 className="mb-4 text-lg font-semibold">Links rápidos</h3>
+            <h3 className="mb-4 text-lg font-semibold text-gray-100">
+              Links rápidos
+            </h3>
             <nav className="flex flex-col space-y-2">
               <NavLink
                 href="/"
-                className="hover:text-brand-300 data-[current=true]:text-brand-500 font-medium text-gray-600"
+                className="font-medium text-brand-200 transition-colors hover:text-brand-300 data-[current=true]:text-white"
               >
                 Home
               </NavLink>
               <NavLink
                 href="/about"
-                className="hover:text-brand-300 data-[current=true]:text-brand-500 font-medium text-gray-600"
+                className="font-medium text-brand-200 transition-colors hover:text-brand-300 data-[current=true]:text-white"
               >
                 Sobre nós
               </NavLink>
               <NavLink
                 href="/menu"
-                className="hover:text-brand-300 data-[current=true]:text-brand-500 font-medium text-gray-600"
+                className="font-medium text-brand-200 transition-colors hover:text-brand-300 data-[current=true]:text-white"
               >
                 Cardápio
               </NavLink>
 
               <NavLink
                 href="/contact"
-                className="hover:text-brand-300 data-[current=true]:text-brand-500 font-medium text-gray-600"
+                className="font-medium text-brand-200 transition-colors hover:text-brand-300 data-[current=true]:text-white"
               >
                 Contato
               </NavLink>
@@ -87,7 +85,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
+        <div className="mt-8 border-t border-gray-200 pt-8 text-center text-sm text-gray-100">
           <p>
             &copy; {new Date().getFullYear()} Velvet. Todos os direitos
             reservados.
