@@ -43,7 +43,7 @@ export default function HomePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <header className="mb-12 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-brand-800">
+        <h1 className="mb-4 text-4xl font-bold text-brand-900">
           Bem-vindo à Velvet
         </h1>
         <p className="text-xl text-gray-600">
@@ -52,7 +52,7 @@ export default function HomePage() {
       </header>
 
       <section className="mb-16">
-        <h2 className="mb-6 text-center text-3xl font-semibold text-brand-800">
+        <h2 className="mb-6 text-center text-3xl font-semibold text-brand-900">
           Nossos Destaques
         </h2>
         <Carousel
@@ -99,7 +99,7 @@ export default function HomePage() {
       </section>
 
       <section className="mb-16">
-        <h2 className="mb-6 text-center text-3xl font-semibold text-brand-800">
+        <h2 className="mb-6 text-center text-3xl font-semibold text-brand-900">
           Sobre Nós
         </h2>
         <div className="flex flex-col items-center gap-8 md:flex-row">
@@ -127,7 +127,7 @@ export default function HomePage() {
       </section>
 
       <section className="mb-16">
-        <h2 className="mb-6 text-center text-3xl font-semibold text-brand-800">
+        <h2 className="mb-6 text-center text-3xl font-semibold text-brand-900">
           Bolos de Casamento
         </h2>
         <div className="relative mb-6 h-96">
@@ -151,7 +151,7 @@ export default function HomePage() {
       </section>
 
       <section>
-        <h2 className="mb-6 text-center text-3xl font-semibold text-brand-800">
+        <h2 className="mb-6 text-center text-3xl font-semibold text-brand-900">
           Entre em Contato
         </h2>
         <div className="rounded-lg bg-gray-100 p-8">

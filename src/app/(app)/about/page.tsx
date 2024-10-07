@@ -10,11 +10,15 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="mb-8 text-center text-4xl font-bold">Sobre a Velvet</h1>
+      <h1 className="mb-8 text-center text-4xl font-bold text-brand-900">
+        Sobre a Velvet
+      </h1>
 
       <div className="mb-12 grid grid-cols-1 items-center gap-8 md:grid-cols-2">
         <div>
-          <h2 className="mb-4 text-2xl font-semibold">Nossa História</h2>
+          <h2 className="mb-4 text-2xl font-semibold text-brand-900">
+            Nossa História
+          </h2>
           <p className="mb-4 text-gray-600">
             A Velvet nasceu em 2010 da paixão de Maria Silva por criar bolos
             deliciosos e visualmente deslumbrantes. O que começou como um hobby
@@ -40,7 +44,7 @@ export default function AboutPage() {
       </div>
 
       <div className="mb-12">
-        <h2 className="mb-4 text-center text-2xl font-semibold">
+        <h2 className="mb-4 text-center text-2xl font-semibold text-brand-900">
           Nossa Missão e Valores
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -55,7 +59,9 @@ export default function AboutPage() {
           </Card>
           <Card>
             <CardContent className="pt-6">
-              <h3 className="mb-2 text-xl font-semibold">Criatividade</h3>
+              <h3 className="mb-2 text-xl font-semibold text-brand-900">
+                Criatividade
+              </h3>
               <p className="text-gray-600">
                 Buscamos constantemente inovar em sabores e designs, trazendo
                 novas experiências aos nossos clientes.
@@ -64,7 +70,9 @@ export default function AboutPage() {
           </Card>
           <Card>
             <CardContent className="pt-6">
-              <h3 className="mb-2 text-xl font-semibold">Atendimento</h3>
+              <h3 className="mb-2 text-xl font-semibold text-brand-900">
+                Atendimento
+              </h3>
               <p className="text-gray-600">
                 Valorizamos cada cliente e nos esforçamos para proporcionar uma
                 experiência excepcional em cada interação.
@@ -75,7 +83,7 @@ export default function AboutPage() {
       </div>
 
       <div>
-        <h2 className="mb-4 text-center text-2xl font-semibold">
+        <h2 className="mb-4 text-center text-2xl font-semibold text-brand-900">
           Nossa Equipe
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -94,7 +102,9 @@ export default function AboutPage() {
                   className="rounded-full"
                 />
               </div>
-              <h3 className="text-xl font-semibold">{member.name}</h3>
+              <h3 className="text-xl font-semibold text-brand-900">
+                {member.name}
+              </h3>
               <p className="text-gray-600">{member.role}</p>
             </div>
           ))}

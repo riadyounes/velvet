@@ -58,26 +58,26 @@ export default function Footer() {
             <nav className="flex flex-col space-y-2">
               <NavLink
                 href="/"
-                className="font-medium text-brand-200 transition-colors hover:text-brand-300 data-[current=true]:text-white"
+                className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
               >
                 Home
               </NavLink>
               <NavLink
                 href="/about"
-                className="font-medium text-brand-200 transition-colors hover:text-brand-300 data-[current=true]:text-white"
+                className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
               >
                 Sobre nós
               </NavLink>
               <NavLink
                 href="/menu"
-                className="font-medium text-brand-200 transition-colors hover:text-brand-300 data-[current=true]:text-white"
+                className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
               >
                 Cardápio
               </NavLink>
 
               <NavLink
                 href="/contact"
-                className="font-medium text-brand-200 transition-colors hover:text-brand-300 data-[current=true]:text-white"
+                className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
               >
                 Contato
               </NavLink>
