@@ -87,7 +87,7 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-gray-200 pt-8 text-center text-sm text-gray-100">
           <p>
-            &copy; {new Date().getFullYear()} Velvet. Todos os direitos
+            &copy; {new Date().getFullYear()} Velvet bolo. Todos os direitos
             reservados.
           </p>
         </div>
