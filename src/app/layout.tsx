@@ -22,9 +22,7 @@ export default function RootLayout({
     <html lang="en" className="h-full" suppressHydrationWarning>
       <body className="flex min-h-screen flex-col">
         <Header />
-        <main className="mx-auto w-full max-w-[1200px] flex-grow py-4">
-          {children}
-        </main>
+        <main className="mx-auto w-full flex-grow py-4">{children}</main>
         <Footer />
       </body>
     </html>
