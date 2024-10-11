@@ -42,7 +42,7 @@ const featuredProducts = [
 export default function HomePage() {
   return (
     <div className="mx-auto">
-      <header className="relative h-[400px] pb-12 text-center lg:h-[800px]">
+      <div className="relative h-[400px] pb-12 text-center">
         <Image
           src="/assets/bg-velvet.jpg"
           alt="Velvet"
@@ -50,11 +50,11 @@ export default function HomePage() {
           className="object-cover"
           priority
         />
-      </header>
+      </div>
 
-      <section className="bg-brand-200 py-16">
-        <div className="container mx-auto">
-          <h2 className="text-brand-900 mb-6 text-center text-3xl font-semibold">
+      <section className="bg-brand-700 py-16">
+        <div className="mx-auto max-w-[1200px]">
+          <h2 className="mb-6 text-center text-3xl font-semibold text-brand-200">
             Nossos Destaques
           </h2>
           <Carousel
@@ -73,6 +73,7 @@ export default function HomePage() {
                         <Image
                           src={product.image}
                           alt={`Bolo ${product.name}`}
+                          className="rounded-xl border"
                           layout="fill"
                           objectFit="cover"
                         />
@@ -95,16 +96,16 @@ export default function HomePage() {
           </Carousel>
           <div className="mt-8 text-center">
             <Link href="/menu">
-              <Button>Ver Cardápio Completo</Button>
+              <Button variant="outline">Ver Cardápio Completo</Button>
             </Link>
           </div>
         </div>
       </section>
 
       <section className="bg-gray-100 py-16">
-        <div className="container mx-auto">
-          <h2 className="text-brand-900 mb-6 text-center text-3xl font-semibold">
-            Sobre Nós
+        <div className="mx-auto max-w-[1200px]">
+          <h2 className="mb-6 text-center text-3xl font-semibold text-brand-900">
+            Sobre a Velvet bolo
           </h2>
           <div className="flex flex-col items-center gap-8 md:flex-row">
             <div className="p-5 md:w-1/2">
@@ -124,16 +125,16 @@ export default function HomePage() {
                 especiais de nossos clientes com nossas criações artesanais.
               </p>
               <Link href="/about">
-                <Button variant="outline">Conheça Nossa História</Button>
+                <Button>Conheça Nossa História</Button>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-brand-200 py-16">
-        <div className="container mx-auto">
-          <h2 className="text-brand-900 mb-6 text-center text-3xl font-semibold">
+      <section className="bg-brand-700 py-16">
+        <div className="mx-auto max-w-[1200px]">
+          <h2 className="mb-6 text-center text-3xl font-semibold text-brand-50">
             Bolos de Casamento
           </h2>
           <div className="p-5 md:w-1/2 lg:mx-auto">
@@ -146,13 +147,15 @@ export default function HomePage() {
               className="rounded-lg object-cover"
             />
           </div>
-          <p className="mx-auto mb-4 text-center font-semibold text-gray-600 lg:max-w-[500px]">
+          <p className="mx-auto mb-4 text-center font-semibold text-brand-100 lg:max-w-[500px]">
             Transforme seu dia especial em um momento inesquecível com nossos
             bolos de casamento personalizados.
           </p>
           <div className="text-center">
             <Link href="/bolos-de-casamento">
-              <Button>Explore Nossos Bolos de Casamento</Button>
+              <Button variant="outline">
+                Explore Nossos Bolos de Casamento
+              </Button>
             </Link>
           </div>
         </div>
@@ -160,7 +163,7 @@ export default function HomePage() {
 
       <section className="bg-gray-100 py-16">
         <div className="container mx-auto">
-          <h2 className="text-brand-900 py-6 text-center text-3xl font-semibold">
+          <h2 className="py-6 text-center text-3xl font-semibold text-brand-900">
             Entre em Contato
           </h2>
           <div className="p-8">

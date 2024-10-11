@@ -13,7 +13,7 @@ import {
 
 export function Header() {
   return (
-    <div className="bg-brand-500 w-full">
+    <div className="w-full bg-brand-700">
       <div className="mx-auto flex min-h-20 max-w-[1200px] items-center justify-between p-6">
         <Link href="/">
           <Image
@@ -27,19 +27,19 @@ export function Header() {
         <nav className="hidden gap-8 lg:flex">
           <NavLink
             href="/menu"
-            className="text-brand-100 hover:text-brand-200 font-medium transition-colors data-[current=true]:text-white"
+            className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
           >
             Cardápio
           </NavLink>
           <NavLink
             href="/about"
-            className="text-brand-100 hover:text-brand-200 font-medium transition-colors data-[current=true]:text-white"
+            className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
           >
             Sobre
           </NavLink>
           <NavLink
             href="/contact"
-            className="text-brand-100 hover:text-brand-200 font-medium transition-colors data-[current=true]:text-white"
+            className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
           >
             Contato
           </NavLink>
@@ -51,19 +51,19 @@ export function Header() {
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             <DropdownMenuItem asChild>
-              <Link href="/menu" className="text-brand-500 font-semibold">
+              <Link href="/menu" className="font-semibold text-brand-500">
                 Cardápio
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
-              <Link href="/about" className="text-brand-500 font-semibold">
+              <Link href="/about" className="font-semibold text-brand-500">
                 Sobre
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
-              <Link href="/contact" className="text-brand-500 font-semibold">
+              <Link href="/contact" className="font-semibold text-brand-500">
                 Contato
               </Link>
             </DropdownMenuItem>

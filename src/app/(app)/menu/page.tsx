@@ -12,43 +12,43 @@ const products = [
     id: 1,
     name: 'Red Velvet',
     price: 89.9,
-    image: '/placeholder.svg?height=300&width=300&text=Red+Velvet',
+    image: '/assets/velvet.jpg',
   },
   {
     id: 2,
     name: 'Chocolate Trufado',
     price: 99.9,
-    image: '/placeholder.svg?height=300&width=300&text=Chocolate+Trufado',
+    image: '/assets/velvet.jpg',
   },
   {
     id: 3,
     name: 'Morango com Chantilly',
     price: 79.9,
-    image: '/placeholder.svg?height=300&width=300&text=Morango+Chantilly',
+    image: '/assets/velvet.jpg',
   },
   {
     id: 4,
     name: 'Limão Siciliano',
     price: 69.9,
-    image: '/placeholder.svg?height=300&width=300&text=Limão+Siciliano',
+    image: '/assets/velvet.jpg',
   },
   {
     id: 5,
     name: 'Nozes com Caramelo',
     price: 109.9,
-    image: '/placeholder.svg?height=300&width=300&text=Nozes+Caramelo',
+    image: '/assets/velvet.jpg',
   },
   {
     id: 6,
     name: 'Frutas Vermelhas',
     price: 89.9,
-    image: '/placeholder.svg?height=300&width=300&text=Frutas+Vermelhas',
+    image: '/assets/velvet.jpg',
   },
 ]
 
 export default function MenuPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="mx-auto max-w-[1200px] px-4 py-8">
       <h1 className="mb-8 text-center text-4xl font-bold text-brand-900">
         Cardápio Velvet
       </h1>
@@ -62,6 +62,7 @@ export default function MenuPage() {
                 alt={`Foto do bolo ${product.name}`}
                 layout="fill"
                 objectFit="cover"
+                quality={100}
               />
             </div>
             <CardContent className="p-4">

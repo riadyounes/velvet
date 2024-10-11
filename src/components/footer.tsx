@@ -6,7 +6,7 @@ import { NavLink } from './nav-link'
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-500 py-12">
+    <footer className="bg-brand-700 py-12">
       <div className="mx-auto max-w-[1200px] px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Column 1: Company Logo */}
@@ -19,12 +19,6 @@ export default function Footer() {
                 height={80}
               />
             </Link>
-            <p className="mt-2 text-sm text-gray-100">
-              Na Velvet Bolo, cada fatia é uma celebração! Com ingredientes
-              selecionados e receitas feitas com carinho, nossos bolos são o
-              toque doce que transforma qualquer momento em uma experiência
-              inesquecível.
-            </p>
           </div>
 
           {/* Column 2: Social Media Links */}
@@ -41,8 +35,9 @@ export default function Footer() {
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                href="#"
+                href="https://wa.me/554199422377"
                 className="text-gray-100 transition-colors hover:text-brand-300"
+                target="_blank"
               >
                 <Phone className="h-6 w-6" />
                 <span className="sr-only">WhatsApp</span>
