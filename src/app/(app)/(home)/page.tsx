@@ -66,6 +66,7 @@ export default function HomePage() {
           >
             <CarouselContent>
               {featuredProducts.map((product, index) => (
+                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={index}>
                   <div className="p-1">
                     <Card>
