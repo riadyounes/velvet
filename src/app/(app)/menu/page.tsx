@@ -1,144 +1,72 @@
-"use client"
-import { useState } from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { Button } from '@/components/ui/button'
-
-const categories = [
-  { id: 'cakes', name: 'Bolos' },
-  { id: 'cookies', name: 'Cookies' },
-  { id: 'coffee', name: 'Café' },
-  { id: 'snacks', name: 'Salgados' },
-  { id: 'drinks', name: 'Bebidas' },
-]
-
-const products = [
-  {
-    id: 1,
-    name: 'Red Velvet',
-    price: 89.9,
-    image: '/assets/velvet.jpg',
-    category: 'cakes',
-  },
-  {
-    id: 2,
-    name: 'Chocolate Trufado',
-    price: 99.9,
-    image: '/assets/velvet.jpg',
-    category: 'cakes',
-  },
-  {
-    id: 3,
-    name: 'Morango com Chantilly',
-    price: 79.9,
-    image: '/assets/velvet.jpg',
-    category: 'cakes',
-  },
-  {
-    id: 4,
-    name: 'Café Expresso',
-    price: 12.9,
-    image: '/assets/velvet.jpg',
-    category: 'coffee',
-  },
-  // Adicione mais produtos aqui para outras categorias
-]
-
 export default function MenuPage() {
-  const [selectedCategory, setSelectedCategory] = useState('cakes')
-  const selectedCategoryName = categories.find(
-    (category) => category.id === selectedCategory
-  )?.name
-
-  const filteredProducts = products.filter(
-    (product) => product.category === selectedCategory
-  )
-
+const menuData = {
+    Bolos: {
+      icon: '🍰',
+      items: [
+        { name: 'Bolo de Chocolate', price: 18, image: '/assets/velvet.jpg' },
+        { name: 'Bolo de Cenoura', price: 20, image: '/assets/velvet.jpg' },
+        { name: 'Bolo de Coco', price: 22, image: '/assets/velvet.jpg' },
+      ],
+    },
+    Cookies: {
+      icon: '🍪',
+      items: [
+        { name: 'Cookie de Chocolate', price: 5, image: '/assets/velvet.jpg' },
+        { name: 'Cookie de Aveia', price: 6, image: '/assets/velvet.jpg' },
+        { name: 'Cookie de Amendoim', price: 7, image: '/assets/velvet.jpg' },
+      ],
+    },
+    Café: {
+      icon: '☕',
+      items: [
+        { name: 'Espresso', price: 8, image: '/assets/velvet.jpg' },
+        { name: 'Cappuccino', price: 15, image: '/assets/velvet.jpg' },
+        { name: 'Latte', price: 13, image: '/assets/velvet.jpg' },
+      ],
+    },
+    Salgados: {
+      icon: '🥐',
+      items: [
+        { name: 'Coxinha', price: 10, image: '/assets/velvet.jpg' },
+        { name: 'Esfiha', price: 12, image: '/assets/velvet.jpg' },
+        { name: 'Empada', price: 14, image: '/assets/velvet.jpg' },
+      ],
+    },
+    Bebidas: {
+      icon: '🥤',
+      items: [
+        { name: 'Suco de Laranja', price: 8, image: '/assets/velvet.jpg' },
+        { name: 'Refrigerante', price: 5, image: '/assets/velvet.jpg' },
+        { name: 'Água Mineral', price: 3, image: '/assets/velvet.jpg' },
+      ],
+    },
+  };
   return (
-    <div className="mx-auto max-w-[1200px] px-4 py-8">
-      <h1 className="mb-8 text-center text-4xl font-bold text-brand-900">
-        Cardápio Velvet
-      </h1>
+    <div className="p-4 container mx-auto">
+      <h1 className="text-4xl font-bold mb-8 text-center text-gray-700">Cardápio</h1>
 
-      {/* Filtros de categorias */}
-      <div className="mb-8">
-        {/* Filtro com botões para telas maiores */}
-        <div className="hidden sm:flex justify-center space-x-4">
-          {categories.map((category) => (
-            <Button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-4 py-2 rounded ${
-                selectedCategory === category.id ? 'bg-primary text-white' : ''
-              }`}
-            >
-              {category.name}
-            </Button>
-          ))}
-        </div>
-
-        {/* Dropdown para mobile usando Shadcn UI */}
-        <div className="sm:hidden flex justify-center">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button className="bg-primary text-white">
-                {selectedCategoryName || 'Selecione uma categoria'}
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              {categories.map((category) => (
-                <DropdownMenuItem
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className="cursor-pointer"
-                >
-                  {category.name}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-      </div>
-
-      {/* Animação de produtos filtrados */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-        {filteredProducts.map((product, index) => (
-          <motion.div
-            key={product.id}
-            className="overflow-hidden"
-            initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }} // Coluna da esquerda: da esquerda, direita: da direita
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Card className="overflow-hidden">
-              <div className="relative h-64">
-                <Image
-                  src={product.image}
-                  alt={`Foto do ${product.name}`}
-                  layout="fill"
-                  objectFit="cover"
-                  quality={100}
+      {Object.entries(menuData).map(([section, data]) => (
+        <section key={section} className="mb-12">
+          <div className="flex items-center mb-4">
+            <span className="mr-2 text-3xl">{data.icon}</span>
+            <h2 className="text-3xl font-semibold text-gray-700">{section}</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {data.items.map((item, index) => (
+              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+              <div key={index} className="text-center">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-48 object-cover rounded-lg mb-2 shadow-lg"
                 />
+                <h3 className="font-semibold text-gray-800">{item.name}</h3>
+                <p className="text-lg font-bold text-gray-600">R$ {item.price}</p>
               </div>
-              <CardContent className="p-4">
-                <h2 className="mb-2 text-xl font-semibold">{product.name}</h2>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-primary">
-                    R$ {product.price.toFixed(2)}
-                  </span>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
-      </div>
+            ))}
+          </div>
+        </section>
+      ))}
     </div>
   )
 }
