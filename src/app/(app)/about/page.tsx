@@ -9,12 +9,16 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="mb-8 text-center text-4xl font-bold">Sobre a Velvet</h1>
+    <div className="mx-auto max-w-[1200px] px-4 py-8">
+      <h1 className="mb-8 text-center text-4xl font-bold text-brand-900">
+        Sobre a Velvet bolo
+      </h1>
 
       <div className="mb-12 grid grid-cols-1 items-center gap-8 md:grid-cols-2">
         <div>
-          <h2 className="mb-4 text-2xl font-semibold">Nossa História</h2>
+          <h2 className="mb-4 text-2xl font-semibold text-brand-900">
+            Nossa História
+          </h2>
           <p className="mb-4 text-gray-600">
             A Velvet nasceu em 2010 da paixão de Maria Silva por criar bolos
             deliciosos e visualmente deslumbrantes. O que começou como um hobby
@@ -40,7 +44,7 @@ export default function AboutPage() {
       </div>
 
       <div className="mb-12">
-        <h2 className="mb-4 text-center text-2xl font-semibold">
+        <h2 className="mb-4 text-center text-2xl font-semibold text-brand-900">
           Nossa Missão e Valores
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -55,7 +59,9 @@ export default function AboutPage() {
           </Card>
           <Card>
             <CardContent className="pt-6">
-              <h3 className="mb-2 text-xl font-semibold">Criatividade</h3>
+              <h3 className="mb-2 text-xl font-semibold text-brand-900">
+                Criatividade
+              </h3>
               <p className="text-gray-600">
                 Buscamos constantemente inovar em sabores e designs, trazendo
                 novas experiências aos nossos clientes.
@@ -64,40 +70,15 @@ export default function AboutPage() {
           </Card>
           <Card>
             <CardContent className="pt-6">
-              <h3 className="mb-2 text-xl font-semibold">Atendimento</h3>
+              <h3 className="mb-2 text-xl font-semibold text-brand-900">
+                Atendimento
+              </h3>
               <p className="text-gray-600">
                 Valorizamos cada cliente e nos esforçamos para proporcionar uma
                 experiência excepcional em cada interação.
               </p>
             </CardContent>
           </Card>
-        </div>
-      </div>
-
-      <div>
-        <h2 className="mb-4 text-center text-2xl font-semibold">
-          Nossa Equipe
-        </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {[
-            { name: 'Maria Silva', role: 'Fundadora e Chef Principal' },
-            { name: 'João Santos', role: 'Chef de Confeitaria' },
-            { name: 'Ana Oliveira', role: 'Gerente de Atendimento ao Cliente' },
-          ].map((member, index) => (
-            <div key={index} className="text-center">
-              <div className="relative mx-auto mb-4 h-48 w-48">
-                <Image
-                  src={`https://plus.unsplash.com/premium_photo-1670884442192-7b58d513cd55?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D`}
-                  alt={`Foto de ${member.name}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-full"
-                />
-              </div>
-              <h3 className="text-xl font-semibold">{member.name}</h3>
-              <p className="text-gray-600">{member.role}</p>
-            </div>
-          ))}
         </div>
       </div>
     </div>

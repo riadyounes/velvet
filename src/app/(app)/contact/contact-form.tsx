@@ -20,7 +20,7 @@ export function ContactForm() {
     Aguardo o retorno e agradeço desde já! 🙌`
 
     // URL do WhatsApp com o número de telefone e mensagem
-    const phoneNumber = '5511999999999'
+    const phoneNumber = '554199422377'
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
     // Redirecionar para o WhatsApp
@@ -30,9 +30,12 @@ export function ContactForm() {
     setEmail('')
     setMessage('')
   }
+
   return (
     <div>
-      <h2 className="mb-4 text-2xl font-semibold">Envie-nos uma mensagem</h2>
+      <h2 className="mb-4 text-2xl font-semibold text-brand-800">
+        Envie-nos uma mensagem
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label
