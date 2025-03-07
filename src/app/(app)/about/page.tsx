@@ -14,7 +14,7 @@ export default function AboutPage() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-zinc-800 opacity-90"></div>
         <div className="relative mx-auto w-full max-w-[1200px]">
-          <div>
+          <div className="ml-2">
             <h1 className="text-left text-5xl font-bold text-white">Sobre</h1>
           </div>
         </div>
