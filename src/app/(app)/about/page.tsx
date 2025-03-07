@@ -9,15 +9,17 @@ export default function AboutPage() {
   return (
     <div className="">
       <div
-        className="flex h-64 items-center bg-cover bg-center"
+        className="relative flex h-64 items-center bg-cover bg-center"
         style={{ backgroundImage: "url('/assets/bg-about-2.jpg')" }}
       >
-        <div className="mx-auto w-full max-w-[1200px]">
+        <div className="absolute inset-0 bg-gradient-to-r from-zinc-800 opacity-90"></div>
+        <div className="relative mx-auto w-full max-w-[1200px]">
           <div>
             <h1 className="text-left text-5xl font-bold text-white">Sobre</h1>
           </div>
         </div>
       </div>
+
       <div className="mx-auto mt-4 max-w-[1200px] px-4">
         <div className="mb-12 grid grid-cols-1 items-center gap-8 md:grid-cols-2">
           <div>

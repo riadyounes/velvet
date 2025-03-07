@@ -11,10 +11,11 @@ export default function ContactPage() {
   return (
     <div className="mb-4">
       <div
-        className="flex h-64 items-center bg-cover bg-center"
+        className="relative flex h-64 items-center bg-cover bg-center"
         style={{ backgroundImage: "url('/assets/bg-contact.jpg')" }}
       >
-        <div className="mx-auto w-full max-w-[1200px]">
+        <div className="absolute inset-0 bg-gradient-to-r from-zinc-800 opacity-90"></div>
+        <div className="relative mx-auto w-full max-w-[1200px]">
           <div>
             <h1 className="text-left text-5xl font-bold text-white">Contato</h1>
           </div>
