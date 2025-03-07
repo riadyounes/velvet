@@ -1,20 +1,27 @@
-import { CakeSlice, MapPin, Phone } from 'lucide-react'
-import type { Metadata } from 'next'
+import { CakeSlice, MapPin, Phone } from "lucide-react";
+import type { Metadata } from "next";
 
-import { ContactForm } from './contact-form'
+import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
-  title: 'Contato',
-}
+  title: "Contato",
+};
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto max-w-[1200px] px-4 py-8">
-      <h1 className="mb-8 text-center text-4xl font-bold text-brand-800">
-        Contate a Velvet Bolo
-      </h1>
+    <div className="mb-4">
+      <div
+        className="flex h-64 items-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/assets/bg-contact.jpg')" }}
+      >
+        <div className="mx-auto w-full max-w-[1200px]">
+          <div>
+            <h1 className="text-left text-5xl font-bold text-white">Contato</h1>
+          </div>
+        </div>
+      </div>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div className="mx-auto mt-4 grid max-w-[1200px] grid-cols-1 justify-center gap-8 px-4 md:grid-cols-2">
         <ContactForm />
         <div>
           <h2 className="mb-4 text-2xl font-semibold text-brand-800">
@@ -51,5 +58,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

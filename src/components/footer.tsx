@@ -1,8 +1,8 @@
-import { Instagram, Phone } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { Instagram, Phone } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-import { NavLink } from './nav-link'
+import { NavLink } from "./nav-link";
 
 export default function Footer() {
   return (
@@ -88,5 +88,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
