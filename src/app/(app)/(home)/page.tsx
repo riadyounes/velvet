@@ -52,7 +52,7 @@ export default function HomePage() {
                 <Button
                   variant="ghost"
                   size="lg"
-                  className="rounded-2xl border border-brand-500 text-brand-500 hover:bg-brand-500"
+                  className="rounded-2xl border border-brand-500 text-brand-500 hover:bg-brand-500 hover:text-white"
                 >
                   Veja Mais
                 </Button>
