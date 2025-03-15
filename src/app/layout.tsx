@@ -1,28 +1,28 @@
-import "./globals.css";
+import './globals.css'
 
-import type { Metadata } from "next";
+import type { Metadata } from 'next'
+import { Jost } from 'next/font/google'
 
-import Footer from "@/components/footer";
-import { Header } from "@/components/header";
-import { Jost } from "next/font/google";
+import Footer from '@/components/footer'
+import { Header } from '@/components/header'
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Velvet bolo",
-    default: "Velvet",
+    template: '%s | Velvet bolo',
+    default: 'Velvet',
   },
-  description: "Bem-vindo ao Velvet, a sua loja de bolos deliciosos.",
-};
+  description: 'Bem-vindo ao Velvet, a sua loja de bolos deliciosos.',
+}
 
 const jost = Jost({
-  subsets: ["latin"],
-  display: "swap",
-});
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" className={jost.className} suppressHydrationWarning>
@@ -32,5 +32,5 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  );
+  )
 }

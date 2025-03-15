@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import Image from "next/image";
+import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: "Sobre",
-};
+  title: 'Sobre',
+}
 
 export default function AboutPage() {
   return (
@@ -58,5 +58,5 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

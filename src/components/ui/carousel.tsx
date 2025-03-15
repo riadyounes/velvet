@@ -1,47 +1,47 @@
-"use client";
+'use client'
 
-import React, { useCallback, useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import useEmblaCarousel from 'embla-carousel-react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 const images = [
   {
-    src: "assets/background2.jpg",
-    alt: "Sobremesa com morango",
-    title: "EXCLUSIVIDADE",
-    subtitle: "Sabores que emocionam a cada colherada.",
+    src: 'assets/background2.jpg',
+    alt: 'Sobremesa com morango',
+    title: 'EXCLUSIVIDADE',
+    subtitle: 'Sabores que emocionam a cada colherada.',
   },
   {
-    src: "assets/background.jpg",
-    alt: "Doce artesanal",
-    title: "SABOR ÚNICO",
-    subtitle: "Receitas exclusivas que encantam paladares.",
+    src: 'assets/background.jpg',
+    alt: 'Doce artesanal',
+    title: 'SABOR ÚNICO',
+    subtitle: 'Receitas exclusivas que encantam paladares.',
   },
-];
+]
 
 const VerticalCarousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ axis: "y", loop: true });
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ axis: 'y', loop: true })
+  const [selectedIndex, setSelectedIndex] = useState(0)
 
   const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap()); // Atualiza o indicador
-  }, [emblaApi]);
+    if (!emblaApi) return
+    setSelectedIndex(emblaApi.selectedScrollSnap()) // Atualiza o indicador
+  }, [emblaApi])
 
   useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
-  }, [emblaApi, onSelect]);
+    if (!emblaApi) return
+    onSelect()
+    emblaApi.on('select', onSelect)
+    emblaApi.on('reInit', onSelect)
+  }, [emblaApi, onSelect])
 
   useEffect(() => {
-    if (!emblaApi) return;
+    if (!emblaApi) return
     const interval = setInterval(() => {
-      emblaApi.scrollNext();
-    }, 3000); // Alterei para 3s para melhor experiência
+      emblaApi.scrollNext()
+    }, 3000) // Alterei para 3s para melhor experiência
 
-    return () => clearInterval(interval);
-  }, [emblaApi]);
+    return () => clearInterval(interval)
+  }, [emblaApi])
 
   return (
     <section className="relative flex h-[500px] w-full flex-col items-center">
@@ -73,13 +73,13 @@ const VerticalCarousel = () => {
           <div
             key={index}
             className={`h-3 w-3 rounded-full transition-all ${
-              selectedIndex === index ? "scale-125 bg-white" : "bg-gray-400"
+              selectedIndex === index ? 'scale-125 bg-white' : 'bg-gray-400'
             }`}
           />
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default VerticalCarousel;
+export default VerticalCarousel

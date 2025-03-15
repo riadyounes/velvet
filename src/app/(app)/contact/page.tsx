@@ -1,11 +1,11 @@
-import { CakeSlice, MapPin, Phone } from "lucide-react";
-import type { Metadata } from "next";
+import { CakeSlice, MapPin, Phone } from 'lucide-react'
+import type { Metadata } from 'next'
 
-import { ContactForm } from "./contact-form";
+import { ContactForm } from './contact-form'
 
 export const metadata: Metadata = {
-  title: "Contato",
-};
+  title: 'Contato',
+}
 
 export default function ContactPage() {
   return (
@@ -59,5 +59,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

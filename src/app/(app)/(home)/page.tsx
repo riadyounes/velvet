@@ -1,30 +1,13 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import { CakeSlice } from 'lucide-react'
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
-import { Button } from "@/components/ui/button";
-
-import { CakeSlice } from "lucide-react";
-import VerticalCarousel from "@/components/ui/carousel";
+import { Button } from '@/components/ui/button'
+import VerticalCarousel from '@/components/ui/carousel'
 
 export const metadata: Metadata = {
-  title: "Home",
-};
-
-const images = [
-  {
-    src: "assets/background2.jpg",
-    alt: "Sobremesa com morango",
-    title: "EXCLUSIVIDADE",
-    subtitle: "Sabores que emocionam a cada colherada.",
-  },
-  {
-    src: "assets/background.jpg",
-    alt: "Doce artesanal",
-    title: "SABOR ÚNICO",
-    subtitle: "Receitas exclusivas que encantam paladares.",
-  },
-];
+  title: 'Home',
+}
 
 export default function HomePage() {
   return (
@@ -78,16 +61,16 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3">
             {[
               {
-                title: "Sabores Irresistíveis",
-                text: "Oferecemos uma variedade de bolos que vão desde os clássicos, como chocolate e baunilha, até combinações exclusivas.",
+                title: 'Sabores Irresistíveis',
+                text: 'Oferecemos uma variedade de bolos que vão desde os clássicos, como chocolate e baunilha, até combinações exclusivas.',
               },
               {
-                title: "Atendimento Personalizado",
-                text: "Nossa equipe está sempre pronta para auxiliar na escolha do bolo perfeito, garantindo que cada detalhe seja conforme o desejado.",
+                title: 'Atendimento Personalizado',
+                text: 'Nossa equipe está sempre pronta para auxiliar na escolha do bolo perfeito, garantindo que cada detalhe seja conforme o desejado.',
               },
               {
-                title: "Entrega Rápida",
-                text: "Sabemos da importância de receber seu bolo no momento certo. Por isso, contamos com um serviço de entrega eficiente para que tudo saia conforme o planejado.",
+                title: 'Entrega Rápida',
+                text: 'Sabemos da importância de receber seu bolo no momento certo. Por isso, contamos com um serviço de entrega eficiente para que tudo saia conforme o planejado.',
               },
             ].map((item, index) => (
               <div key={index} className="flex flex-col items-center">
@@ -149,9 +132,9 @@ export default function HomePage() {
               <p className="mb-6 max-w-[500px] font-medium leading-8 text-gray-700">
                 Com um toque contemporâneo, Mariana Abouhamad reinventa
                 sobremesas clássicas, valorizando os ricos ingredientes
-                brasileiros. Como ela mesmo diz, "um evento pode estar cheio de
-                momentos emocionantes e especiais, mas a mesa de doces traz
-                consigo um dos mais gostosos!"
+                brasileiros. Como ela mesmo diz, &quot;um evento pode estar
+                cheio de momentos emocionantes e especiais, mas a mesa de doces
+                traz consigo um dos mais gostosos!&quot;
               </p>
               <Link href="/sobre-chef">
                 <Button
@@ -175,5 +158,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
