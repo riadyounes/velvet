@@ -32,7 +32,7 @@ export default function HomePage() {
               qualidade incomparável.
             </p>
             <div className="mt-8">
-              <Link href="/menu">
+              <Link href="/about">
                 <Button
                   variant="ghost"
                   size="lg"
@@ -46,7 +46,7 @@ export default function HomePage() {
 
           <div className="flex justify-center md:w-1/2">
             <img
-              src="/assets/bolo.png"
+              src="/assets/bolo-sobre.png"
               alt="Delicious cupcakes and pastries"
               className="w-64 md:w-auto"
             />
