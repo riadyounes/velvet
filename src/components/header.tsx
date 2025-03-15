@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { NavLink } from './nav-link'
-import { Drawer, DrawerContent, DrawerTrigger } from './ui/drawer'
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from './ui/sheet'
 
 export function Header() {
   return (
@@ -46,11 +46,15 @@ export function Header() {
             Contato
           </NavLink>
         </nav>
-        <Drawer direction="left">
-          <DrawerTrigger className="lg:hidden">
+
+        <Sheet>
+          <SheetTrigger className="lg:hidden">
             <AlignJustify className="size-7" />
-          </DrawerTrigger>
-          <DrawerContent className="flex h-full max-w-[70%] flex-col gap-4 bg-brand-800 p-4">
+          </SheetTrigger>
+          <SheetContent className="flex flex-col gap-4 bg-brand-800 p-4">
+            <SheetHeader className="text-xl font-bold text-white">
+              Menu
+            </SheetHeader>
             <NavLink
               href="https://velvet-1.goomer.app/menu?fbclid=PAY2xjawI3E6RleHRuA2FlbQIxMAABplcwotZcbQLuvYxrWlqzpinSOPmQ3YBVW8V7fj3CUwdaJ6xe_2JWLxwuHg_aem_gYO1HPjGeMW3XBmPqg_tUw"
               target="_blank"
@@ -77,8 +81,8 @@ export function Header() {
             >
               Contato
             </NavLink>
-          </DrawerContent>
-        </Drawer>
+          </SheetContent>
+        </Sheet>
       </div>
     </div>
   )
