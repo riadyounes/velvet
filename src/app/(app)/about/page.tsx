@@ -12,7 +12,7 @@ export default function AboutPage() {
     <div className="">
       <div
         className="relative flex h-64 items-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/bg-about-2.jpg')" }}
+        style={{ backgroundImage: "url('/assets/bolo2.jpg')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-zinc-800 opacity-90"></div>
         <div className="relative mx-auto w-full max-w-[1200px]">
