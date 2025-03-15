@@ -57,7 +57,7 @@ export function Header() {
           <SheetTrigger className="lg:hidden">
             <AlignJustify className="size-7" />
           </SheetTrigger>
-          <SheetContent className="flex flex-col gap-4 bg-brand-800 p-4">
+          <SheetContent className="flex flex-col gap-4 bg-brand-700 p-4">
             <SheetHeader className="text-xl font-bold text-white">
               Menu
             </SheetHeader>

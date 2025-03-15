@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import TestimonialSection from '@/components/testimonial-section'
 import { Button } from '@/components/ui/button'
 import VerticalCarousel from '@/components/ui/carousel'
 
@@ -18,7 +19,7 @@ export default function HomePage() {
       <section className="bg-white px-6 py-20 md:px-0">
         <div className="mx-auto flex max-w-[1200px] flex-col items-center md:flex-row">
           <div className="mb-8 text-center md:mb-0 md:w-1/2 md:text-left">
-            <h2 className="mb-6 text-4xl font-light text-brand-500 md:text-5xl">
+            <h2 className="mb-6 text-4xl font-light text-brand-700 md:text-5xl">
               NOSSA LOJA
             </h2>
             {/* <h4 className="mx-auto mb-4 max-w-[400px] text-lg font-semibold md:mx-0">
@@ -36,7 +37,7 @@ export default function HomePage() {
                 <Button
                   variant="ghost"
                   size="lg"
-                  className="rounded-2xl border border-brand-500 text-brand-500 hover:bg-brand-500 hover:text-white"
+                  className="rounded-2xl border border-brand-700 text-brand-700 hover:bg-brand-700 hover:text-white"
                 >
                   Veja Mais
                 </Button>
@@ -56,7 +57,7 @@ export default function HomePage() {
 
       <section className="bg-gray-100 px-6 py-20 md:px-0">
         <div className="mx-auto max-w-[1200px]">
-          <h2 className="mb-10 text-center text-4xl text-brand-500 md:text-5xl">
+          <h2 className="mb-10 text-center text-4xl text-brand-700 md:text-5xl">
             NOSSOS DESTAQUES
           </h2>
           <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3">
@@ -75,7 +76,7 @@ export default function HomePage() {
               },
             ].map((item, index) => (
               <div key={index} className="flex flex-col items-center">
-                <CakeSlice size={42} className="mb-3 text-brand-500" />
+                <CakeSlice size={42} className="mb-3 text-brand-700" />
                 <h2 className="text-lg font-semibold text-brand-950">
                   {item.title}
                 </h2>
@@ -99,7 +100,7 @@ export default function HomePage() {
               />
             </div>
 
-            <div className="flex w-full flex-col items-center justify-center bg-brand-500 p-6 text-center text-white md:w-3/5 md:p-10 md:text-left">
+            <div className="flex w-full flex-col items-center justify-center bg-brand-700 p-6 text-center text-white md:w-3/5 md:p-10 md:text-left">
               <div>
                 <h2 className="mb-6 text-4xl font-light md:text-5xl">
                   FESTAS E EVENTOS
@@ -129,7 +130,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1200px]">
           <div className="flex flex-col items-center md:flex-row">
             <div className="mb-8 w-full text-center md:mb-0 md:w-1/2 md:text-left">
-              <h2 className="mb-6 text-4xl font-light text-brand-500 md:text-5xl">
+              <h2 className="mb-6 text-4xl font-light text-brand-700 md:text-5xl">
                 NOSSA CHEF
               </h2>
               <p className="mb-6 max-w-[500px] font-medium leading-8 text-gray-700">
@@ -143,7 +144,7 @@ export default function HomePage() {
                 <Button
                   variant="ghost"
                   size="lg"
-                  className="rounded-2xl border border-brand-500 text-brand-500 hover:bg-brand-500 hover:text-white"
+                  className="rounded-2xl border border-brand-700 text-brand-700 hover:bg-brand-700 hover:text-white"
                 >
                   Veja mais
                 </Button>
@@ -160,6 +161,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <TestimonialSection />
     </div>
   )
 }

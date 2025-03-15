@@ -25,20 +25,20 @@ export default function ContactPage() {
       <div className="mx-auto mt-4 grid max-w-[1200px] grid-cols-1 justify-center gap-8 px-4 md:grid-cols-2">
         <ContactForm />
         <div>
-          <h2 className="mb-4 text-2xl font-semibold text-brand-800">
+          <h2 className="mb-4 text-2xl font-semibold text-brand-700">
             Informações de contato
           </h2>
           <div className="space-y-4">
             <div className="flex items-center">
-              <CakeSlice className="mr-2 h-5 w-5 text-brand-500" />
+              <CakeSlice className="mr-2 h-5 w-5 text-brand-700" />
               <span>Velvet bolo</span>
             </div>
             <div className="flex items-center">
-              <Phone className="mr-2 h-5 w-5 text-brand-500" />
+              <Phone className="mr-2 h-5 w-5 text-brand-700" />
               <span>(41) 9942-2377</span>
             </div>
             <div className="flex items-center">
-              <MapPin className="mr-2 h-5 w-5 text-primary" />
+              <MapPin className="mr-2 h-5 w-5 text-brand-700" />
               <span>Rua Visconde de Nácar, 930 - Centro, Curitiba, PR</span>
             </div>
           </div>
