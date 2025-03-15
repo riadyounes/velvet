@@ -3,6 +3,7 @@ import './globals.css'
 import { MessageCircle } from 'lucide-react'
 import type { Metadata } from 'next'
 import { Jost } from 'next/font/google'
+import Link from 'next/link'
 
 import Footer from '@/components/footer'
 import { Header } from '@/components/header'
@@ -31,14 +32,14 @@ export default function RootLayout({
         <Header />
         <main className="mx-auto w-full flex-grow">{children}</main>
         <Footer />
-        <a
+        <Link
           href="https://wa.me/554199422377"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-4 right-4 rounded-full bg-green-500 p-3 text-white shadow-lg transition-all hover:bg-green-600"
         >
           <MessageCircle size={32} />
-        </a>
+        </Link>
       </body>
     </html>
   )
