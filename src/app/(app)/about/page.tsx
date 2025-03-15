@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
+import ImageGallery from '@/components/image-gallery'
+
 export const metadata: Metadata = {
   title: 'Sobre',
 }
@@ -20,7 +22,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="mx-auto mt-4 max-w-[1200px] px-4">
+      <div className="mx-auto mt-4 w-full max-w-[1200px] px-4">
         <div className="mb-12 grid grid-cols-1 items-center gap-8 md:grid-cols-2">
           <div>
             <h2 className="mb-4 text-2xl font-semibold text-brand-900">
@@ -39,16 +41,18 @@ export default function AboutPage() {
               clientes com criações únicas e saborosas.
             </p>
           </div>
-
-          <Image
-            src="/assets/dona.jpg"
-            alt="Nossa Chef"
-            height={500}
-            width={300}
-            objectFit="contain"
-            className="rounded-2xl shadow-lg"
-          />
+          <div className="flex justify-center lg:justify-end">
+            <Image
+              src="/assets/dona.jpg"
+              alt="Nossa Chef"
+              height={500}
+              width={300}
+              objectFit="contain"
+              className="rounded-2xl shadow-lg"
+            />
+          </div>
         </div>
+        <ImageGallery />
       </div>
     </div>
   )
