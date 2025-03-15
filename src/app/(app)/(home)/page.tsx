@@ -1,5 +1,6 @@
 import { CakeSlice } from 'lucide-react'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
@@ -89,10 +90,12 @@ export default function HomePage() {
         <div className="mx-auto">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-2/5">
-              <img
+              <Image
                 src="/assets/bolo2.jpg"
                 alt="Mesa de doces para eventos"
                 className="h-[300px] w-full object-cover md:h-[500px]"
+                width={500}
+                height={300}
               />
             </div>
 
@@ -107,7 +110,7 @@ export default function HomePage() {
                   comemorações. Acreditamos que todas as ocasiões merecem ser
                   celebradas em grande estilo.
                 </p>
-                <Link href="/eventos">
+                {/* <Link href="/eventos">
                   <Button
                     variant="ghost"
                     size="lg"
@@ -115,7 +118,7 @@ export default function HomePage() {
                   >
                     Veja Mais
                   </Button>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

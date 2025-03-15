@@ -39,22 +39,15 @@ export default function AboutPage() {
               clientes com criações únicas e saborosas.
             </p>
           </div>
-          <div className="relative h-80 md:h-96">
-            <Image
-              src="/assets/dona.jpg"
-              alt="Fundadora Maria Silva na cozinha da Velvet"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-2xl shadow-lg"
-            />
-            {/* <div className="w-full md:w-1/3">
-              <img
-                src="/assets/dona.jpg"
-                alt="Nossa Chef"
-                className="h-auto w-full  object-cover shadow-lg"
-              />
-            </div> */}
-          </div>
+
+          <Image
+            src="/assets/dona.jpg"
+            alt="Nossa Chef"
+            height={500}
+            width={300}
+            objectFit="contain"
+            className="rounded-2xl shadow-lg"
+          />
         </div>
       </div>
     </div>
