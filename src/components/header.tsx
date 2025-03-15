@@ -3,7 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { NavLink } from './nav-link'
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from './ui/sheet'
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTrigger,
+} from './ui/sheet'
 
 export function Header() {
   return (
@@ -55,32 +61,40 @@ export function Header() {
             <SheetHeader className="text-xl font-bold text-white">
               Menu
             </SheetHeader>
-            <NavLink
-              href="https://velvet-1.goomer.app/menu?fbclid=PAY2xjawI3E6RleHRuA2FlbQIxMAABplcwotZcbQLuvYxrWlqzpinSOPmQ3YBVW8V7fj3CUwdaJ6xe_2JWLxwuHg_aem_gYO1HPjGeMW3XBmPqg_tUw"
-              target="_blank"
-              className="font-medium text-white transition-colors"
-            >
-              Produtos da loja
-            </NavLink>
-            <NavLink
-              href="https://velvet.goomer.app/menu?fbclid=PAY2xjawI3Ew5leHRuA2FlbQIxMAABpqj83g3KHA4vMpQN3qOZLvO6UosJkmT4NMhugkkJMXauxMbOO0Bo5VgAyw_aem_7v5pAHqkfNsG4KxqazuzVg"
-              target="_blank"
-              className="font-medium text-white transition-colors"
-            >
-              Bolos festivos
-            </NavLink>
-            <NavLink
-              href="/about"
-              className="font-medium text-white transition-colors"
-            >
-              Sobre
-            </NavLink>
-            <NavLink
-              href="/contact"
-              className="font-medium text-white transition-colors"
-            >
-              Contato
-            </NavLink>
+            <SheetClose asChild>
+              <NavLink
+                href="https://velvet-1.goomer.app/menu?fbclid=PAY2xjawI3E6RleHRuA2FlbQIxMAABplcwotZcbQLuvYxrWlqzpinSOPmQ3YBVW8V7fj3CUwdaJ6xe_2JWLxwuHg_aem_gYO1HPjGeMW3XBmPqg_tUw"
+                target="_blank"
+                className="font-medium text-white transition-colors"
+              >
+                Produtos da loja
+              </NavLink>
+            </SheetClose>
+            <SheetClose asChild>
+              <NavLink
+                href="https://velvet.goomer.app/menu?fbclid=PAY2xjawI3Ew5leHRuA2FlbQIxMAABpqj83g3KHA4vMpQN3qOZLvO6UosJkmT4NMhugkkJMXauxMbOO0Bo5VgAyw_aem_7v5pAHqkfNsG4KxqazuzVg"
+                target="_blank"
+                className="font-medium text-white transition-colors"
+              >
+                Bolos festivos
+              </NavLink>
+            </SheetClose>
+            <SheetClose asChild>
+              <NavLink
+                href="/about"
+                className="font-medium text-white transition-colors"
+              >
+                Sobre
+              </NavLink>
+            </SheetClose>
+            <SheetClose asChild>
+              <NavLink
+                href="/contact"
+                className="font-medium text-white transition-colors"
+              >
+                Contato
+              </NavLink>
+            </SheetClose>
           </SheetContent>
         </Sheet>
       </div>
