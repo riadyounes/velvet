@@ -1,6 +1,12 @@
 'use client'
 
-import { ChevronLeft, ChevronRight, Quote, Star, ExternalLink } from 'lucide-react'
+import {
+  ChevronLeft,
+  ChevronRight,
+  ExternalLink,
+  Quote,
+  Star,
+} from 'lucide-react'
 import { useState } from 'react'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
@@ -145,20 +151,26 @@ export default function TestimonialSection() {
           {/* Botão para feedbacks do Google */}
           <div className="mt-12 text-center">
             <div className="mb-4 flex items-center justify-center gap-2">
-              <Star className="h-5 w-5 text-yellow-500 fill-current" />
+              <Star className="h-5 w-5 fill-current text-yellow-500" />
               <span className="text-lg font-semibold text-gray-700">5.0</span>
               <span className="text-gray-600">(200+ avaliações)</span>
             </div>
             <Button
-              onClick={() => window.open('https://www.google.com/search?sca_esv=2e47c951dd57c6d7&sxsrf=AE3TifMvZQvPXA8laPvIrFRumjQV09cpYA:1754929692666&q=velvet+bolo+curitiba&sa=X&ved=2ahUKEwi2sb_HloOPAxX8LLkGHfKyLjIQrrQLegQIGRAA&biw=1492&bih=854&dpr=2', '_blank')}
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2 mx-auto"
+              onClick={() =>
+                window.open(
+                  'https://www.google.com/search?sca_esv=2e47c951dd57c6d7&sxsrf=AE3TifMvZQvPXA8laPvIrFRumjQV09cpYA:1754929692666&q=velvet+bolo+curitiba&sa=X&ved=2ahUKEwi2sb_HloOPAxX8LLkGHfKyLjIQrrQLegQIGRAA&biw=1492&bih=854&dpr=2',
+                  '_blank',
+                )
+              }
+              className="mx-auto flex items-center gap-2 rounded-lg bg-green-600 px-8 py-3 font-medium text-white transition-colors duration-200 hover:bg-green-700"
             >
               <Star className="h-5 w-5" />
               Ver Todas as Avaliações no Google
               <ExternalLink className="h-4 w-4" />
             </Button>
             <p className="mt-3 text-sm text-gray-500">
-              Clique para ver todos os depoimentos e avaliações dos nossos clientes
+              Clique para ver todos os depoimentos e avaliações dos nossos
+              clientes
             </p>
           </div>
         </div>
