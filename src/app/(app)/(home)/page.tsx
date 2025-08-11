@@ -1,4 +1,4 @@
-import { CakeSlice } from 'lucide-react'
+import { CakeSlice, Heart, Star, Users } from 'lucide-react'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -102,22 +102,34 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3">
             {[
               {
-                title: 'Qualidade e cuidado em cada ingrediente ',
+                title: 'Qualidade e cuidado em cada ingrediente',
+                icon: Heart,
+                description: 'Ingredientes selecionados com carinho'
               },
               {
                 title: 'Sabores equilibrados, com a doçura na medida certa',
+                icon: Star,
+                description: 'Receitas testadas e aprovadas'
               },
               {
                 title: 'Atendimento atencioso em cada detalhe',
+                icon: Users,
+                description: 'Foco total no cliente'
               },
-            ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <CakeSlice size={42} className="mb-3 text-brand-700" />
-                <h2 className="text-lg font-semibold text-brand-950">
-                  {item.title}
-                </h2>
-              </div>
-            ))}
+            ].map((item, index) => {
+              const IconComponent = item.icon
+              return (
+                <div key={index} className="flex flex-col items-center">
+                  <IconComponent size={42} className="mb-3 text-brand-700" />
+                  <h2 className="text-lg font-semibold text-brand-950 mb-2">
+                    {item.title}
+                  </h2>
+                  <p className="text-sm text-gray-600 max-w-[250px]">
+                    {item.description}
+                  </p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
