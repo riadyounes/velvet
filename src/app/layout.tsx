@@ -1,57 +1,57 @@
-import "./globals.css";
+import './globals.css'
 
-import { MessageCircle } from "lucide-react";
-import type { Metadata } from "next";
-import { Jost } from "next/font/google";
-import Link from "next/link";
+import { MessageCircle } from 'lucide-react'
+import type { Metadata } from 'next'
+import { Jost } from 'next/font/google'
+import Link from 'next/link'
 
-import Footer from "@/components/footer";
-import { Header } from "@/components/header";
-import StructuredData from "@/components/structured-data";
+import Footer from '@/components/footer'
+import { Header } from '@/components/header'
+import StructuredData from '@/components/structured-data'
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Velvet Bolo - Bolos Artesanais em Curitiba",
-    default: "Velvet Bolo - Bolos Artesanais e Doces em Curitiba",
+    template: '%s | Velvet Bolo - Bolos Artesanais em Curitiba',
+    default: 'Velvet Bolo - Bolos Artesanais e Doces em Curitiba',
   },
   description:
-    "Velvet Bolo: Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Qualidade premium, sabores únicos e atendimento personalizado para festas e eventos.",
+    'Velvet Bolo: Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Qualidade premium, sabores únicos e atendimento personalizado para festas e eventos.',
   keywords:
-    "confeitaria, bolos artesanais, doces, sobremesas, Curitiba, festas, eventos, bolos de casamento, bolos de aniversário, confeitaria artesanal",
-  authors: [{ name: "Velvet Bolo" }],
-  creator: "Velvet Bolo",
-  publisher: "Velvet Bolo",
+    'confeitaria, bolos artesanais, doces, sobremesas, Curitiba, festas, eventos, bolos de casamento, bolos de aniversário, confeitaria artesanal',
+  authors: [{ name: 'Velvet Bolo' }],
+  creator: 'Velvet Bolo',
+  publisher: 'Velvet Bolo',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://velvet-one.vercel.app"),
+  metadataBase: new URL('https://velvet-one.vercel.app'),
   alternates: {
-    canonical: "/",
+    canonical: '/',
   },
   openGraph: {
-    type: "website",
-    locale: "pt_BR",
-    url: "https://velvet-one.vercel.app",
-    siteName: "Velvet Bolo",
-    title: "Velvet Bolo - Bolos Artesanais em Curitiba",
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://velvet-one.vercel.app',
+    siteName: 'Velvet Bolo',
+    title: 'Velvet Bolo - Bolos Artesanais em Curitiba',
     description:
-      "Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Qualidade premium e sabores únicos para suas celebrações.",
+      'Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Qualidade premium e sabores únicos para suas celebrações.',
     images: [
       {
-        url: "/assets/velvet.jpg",
+        url: '/assets/velvet.jpg',
         width: 1200,
         height: 630,
-        alt: "Velvet Confeitaria - Bolos Artesanais",
+        alt: 'Velvet Confeitaria - Bolos Artesanais',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Velvet Bolo - Bolos Artesanais em Curitiba",
-    description: "Bolos artesanais, doces e sobremesas exclusivas em Curitiba",
-    images: ["/assets/velvet.jpg"],
+    card: 'summary_large_image',
+    title: 'Velvet Bolo - Bolos Artesanais em Curitiba',
+    description: 'Bolos artesanais, doces e sobremesas exclusivas em Curitiba',
+    images: ['/assets/velvet.jpg'],
   },
   robots: {
     index: true,
@@ -59,25 +59,25 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   verification: {
-    google: "your-google-verification-code", // Adicione seu código de verificação do Google Search Console
+    google: 'your-google-verification-code', // Adicione seu código de verificação do Google Search Console
   },
-};
+}
 
 const jost = Jost({
-  subsets: ["latin"],
-  display: "swap",
-});
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="pt-BR" className={jost.className} suppressHydrationWarning>
@@ -104,5 +104,5 @@ export default function RootLayout({
         </Link>
       </body>
     </html>
-  );
+  )
 }

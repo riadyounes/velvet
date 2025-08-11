@@ -58,7 +58,7 @@ export default function Footer() {
                 Home
               </NavLink>
               <NavLink
-                href="/about"
+                href="/sobre"
                 className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
               >
                 Sobre nós

@@ -1,84 +1,84 @@
-import type { Metadata } from "next";
+import { Calendar, Clock, ExternalLink, ShoppingBag } from 'lucide-react'
+import type { Metadata } from 'next'
+
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Clock, ShoppingBag, Calendar, ExternalLink } from "lucide-react";
-import Link from "next/link";
+} from '@/components/ui/card'
 
 export const metadata: Metadata = {
-  title: "Nossos Bolos",
+  title: 'Nossos Bolos',
   description:
-    "Descubra nossa seleção especial de bolos velvet artesanais em Curitiba. Red Velvet, Pink Velvet, Coffee Velvet e muito mais!",
+    'Descubra nossa seleção especial de bolos velvet artesanais em Curitiba. Red Velvet, Pink Velvet, Coffee Velvet e muito mais!',
   keywords:
-    "bolos velvet Curitiba, red velvet, pink velvet, coffee velvet, black velvet, bolos artesanais, confeitaria Curitiba",
+    'bolos velvet Curitiba, red velvet, pink velvet, coffee velvet, black velvet, bolos artesanais, confeitaria Curitiba',
   openGraph: {
-    title: "Nossos Bolos - Velvet Bolo",
+    title: 'Nossos Bolos - Velvet Bolo',
     description:
-      "8 sabores incríveis de bolos velvet artesanais em Curitiba. Qualidade premium e sabores únicos!",
+      '8 sabores incríveis de bolos velvet artesanais em Curitiba. Qualidade premium e sabores únicos!',
     images: [
-      "/assets/bolo-red.jpg",
-      "/assets/bolo-happy.jpg",
-      "/assets/bolo-black.jpg",
+      '/assets/bolo-red.jpg',
+      '/assets/bolo-happy.jpg',
+      '/assets/bolo-black.jpg',
     ],
   },
-};
+}
 
 const sabores = [
   {
-    nome: "Red Velvet",
-    cor: "border-red-500 shadow-red-200",
-    imagem: "/assets/bolo-red.jpg",
-    alt: "Bolo Red Velvet da Velvet Bolo - Massa vermelha com cobertura cremosa",
+    nome: 'Red Velvet',
+    cor: 'border-red-500 shadow-red-200',
+    imagem: '/assets/bolo-red.jpg',
+    alt: 'Bolo Red Velvet da Velvet Bolo - Massa vermelha com cobertura cremosa',
   },
   {
-    nome: "Pink Velvet",
-    cor: "border-pink-500 shadow-pink-200",
-    imagem: "/assets/bolo-happy.jpg",
-    alt: "Bolo Pink Velvet da Velvet Bolo - Massa rosa com decoração elegante",
+    nome: 'Pink Velvet',
+    cor: 'border-pink-500 shadow-pink-200',
+    imagem: '/assets/bolo-happy.jpg',
+    alt: 'Bolo Pink Velvet da Velvet Bolo - Massa rosa com decoração elegante',
   },
   {
-    nome: "Coffee Velvet",
-    cor: "border-amber-700 shadow-amber-200",
-    imagem: "/assets/bolo-3.jpg",
-    alt: "Bolo Coffee Velvet da Velvet Bolo - Massa de café com sabor intenso",
+    nome: 'Coffee Velvet',
+    cor: 'border-amber-700 shadow-amber-200',
+    imagem: '/assets/bolo-3.jpg',
+    alt: 'Bolo Coffee Velvet da Velvet Bolo - Massa de café com sabor intenso',
   },
   {
-    nome: "Black Velvet",
-    cor: "border-gray-800 shadow-gray-200",
-    imagem: "/assets/bolo-black.jpg",
-    alt: "Bolo Black Velvet da Velvet Bolo - Massa escura com decoração sofisticada",
+    nome: 'Black Velvet',
+    cor: 'border-gray-800 shadow-gray-200',
+    imagem: '/assets/bolo-black.jpg',
+    alt: 'Bolo Black Velvet da Velvet Bolo - Massa escura com decoração sofisticada',
   },
   {
-    nome: "Martha Velvet",
-    cor: "border-purple-500 shadow-purple-200",
-    imagem: "/assets/bolo-sobre.png",
-    alt: "Bolo Martha Velvet da Velvet Bolo - Massa roxa com recheio especial",
+    nome: 'Martha Velvet',
+    cor: 'border-purple-500 shadow-purple-200',
+    imagem: '/assets/bolo-sobre.png',
+    alt: 'Bolo Martha Velvet da Velvet Bolo - Massa roxa com recheio especial',
   },
   {
-    nome: "Tropical Velvet",
-    cor: "border-green-500 shadow-green-200",
-    imagem: "/assets/bolo2.jpg",
-    alt: "Bolo Tropical Velvet da Velvet Bolo - Massa verde com sabores tropicais",
+    nome: 'Tropical Velvet',
+    cor: 'border-green-500 shadow-green-200',
+    imagem: '/assets/bolo2.jpg',
+    alt: 'Bolo Tropical Velvet da Velvet Bolo - Massa verde com sabores tropicais',
   },
   {
-    nome: "Pistachio Velvet",
-    cor: "border-emerald-600 shadow-emerald-200",
-    imagem: "/assets/bolo.png",
-    alt: "Bolo Pistachio Velvet da Velvet Bolo - Massa de pistache com textura única",
+    nome: 'Pistachio Velvet',
+    cor: 'border-emerald-600 shadow-emerald-200',
+    imagem: '/assets/bolo.png',
+    alt: 'Bolo Pistachio Velvet da Velvet Bolo - Massa de pistache com textura única',
   },
   {
-    nome: "Rainbow Velvet",
-    cor: "border-gradient-to-r from-red-500 via-yellow-500 to-blue-500 shadow-rainbow",
-    imagem: "/assets/velvet.jpg",
-    alt: "Bolo Rainbow Velvet da Velvet Bolo - Massa colorida com cores vibrantes",
+    nome: 'Rainbow Velvet',
+    cor: 'border-gradient-to-r from-red-500 via-yellow-500 to-blue-500 shadow-rainbow',
+    imagem: '/assets/velvet.jpg',
+    alt: 'Bolo Rainbow Velvet da Velvet Bolo - Massa colorida com cores vibrantes',
   },
-];
+]
 
 export default function NossosBolosPage() {
   return (
@@ -117,7 +117,7 @@ export default function NossosBolosPage() {
                   />
                   {/* Overlay sutil com a cor do sabor */}
                   <div
-                    className={`absolute inset-0 opacity-20 ${sabor.nome === "Rainbow Velvet" ? "bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500" : sabor.cor.includes("red") ? "bg-red-500" : sabor.cor.includes("pink") ? "bg-pink-500" : sabor.cor.includes("amber") ? "bg-amber-700" : sabor.cor.includes("gray") ? "bg-gray-800" : sabor.cor.includes("purple") ? "bg-purple-500" : sabor.cor.includes("green") ? "bg-green-500" : "bg-emerald-600"}`}
+                    className={`absolute inset-0 opacity-20 ${sabor.nome === 'Rainbow Velvet' ? 'bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500' : sabor.cor.includes('red') ? 'bg-red-500' : sabor.cor.includes('pink') ? 'bg-pink-500' : sabor.cor.includes('amber') ? 'bg-amber-700' : sabor.cor.includes('gray') ? 'bg-gray-800' : sabor.cor.includes('purple') ? 'bg-purple-500' : sabor.cor.includes('green') ? 'bg-green-500' : 'bg-emerald-600'}`}
                   ></div>
                 </div>
                 <p className="text-xl font-bold text-gray-700 transition-colors group-hover:text-brand-700 group-hover:text-gray-900">
@@ -228,5 +228,5 @@ export default function NossosBolosPage() {
         </section>
       </div>
     </div>
-  );
+  )
 }

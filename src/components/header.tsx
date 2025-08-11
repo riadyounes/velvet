@@ -1,15 +1,15 @@
-import { AlignJustify } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { AlignJustify } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { NavLink } from "./nav-link";
+import { NavLink } from './nav-link'
 import {
   Sheet,
   SheetClose,
   SheetContent,
   SheetHeader,
   SheetTrigger,
-} from "./ui/sheet";
+} from './ui/sheet'
 
 export function Header() {
   return (
@@ -99,5 +99,5 @@ export function Header() {
         </Sheet>
       </div>
     </div>
-  );
+  )
 }
