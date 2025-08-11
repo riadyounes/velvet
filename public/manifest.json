@@ -1,0 +1,27 @@
+{
+  "name": "Velvet Bolo - Bolos Artesanais em Curitiba",
+  "short_name": "Velvet",
+  "description": "Bolos artesanais, doces e sobremesas exclusivas em Curitiba",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8B4513",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "business", "lifestyle"],
+  "lang": "pt-BR",
+  "dir": "ltr"
+} 

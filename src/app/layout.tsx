@@ -1,33 +1,95 @@
-import './globals.css'
+import "./globals.css";
 
-import { MessageCircle } from 'lucide-react'
-import type { Metadata } from 'next'
-import { Jost } from 'next/font/google'
-import Link from 'next/link'
+import { MessageCircle } from "lucide-react";
+import type { Metadata } from "next";
+import { Jost } from "next/font/google";
+import Link from "next/link";
 
-import Footer from '@/components/footer'
-import { Header } from '@/components/header'
+import Footer from "@/components/footer";
+import { Header } from "@/components/header";
+import StructuredData from "@/components/structured-data";
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Velvet bolo',
-    default: 'Velvet',
+    template: "%s | Velvet Bolo - Bolos Artesanais em Curitiba",
+    default: "Velvet Bolo - Bolos Artesanais e Doces em Curitiba",
   },
-  description: 'Bem-vindo ao Velvet, a sua loja de bolos deliciosos.',
-}
+  description:
+    "Velvet Bolo: Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Qualidade premium, sabores únicos e atendimento personalizado para festas e eventos.",
+  keywords:
+    "confeitaria, bolos artesanais, doces, sobremesas, Curitiba, festas, eventos, bolos de casamento, bolos de aniversário, confeitaria artesanal",
+  authors: [{ name: "Velvet Bolo" }],
+  creator: "Velvet Bolo",
+  publisher: "Velvet Bolo",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://velvet-one.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://velvet-one.vercel.app",
+    siteName: "Velvet Bolo",
+    title: "Velvet Bolo - Bolos Artesanais em Curitiba",
+    description:
+      "Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Qualidade premium e sabores únicos para suas celebrações.",
+    images: [
+      {
+        url: "/assets/velvet.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Velvet Confeitaria - Bolos Artesanais",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Velvet Bolo - Bolos Artesanais em Curitiba",
+    description: "Bolos artesanais, doces e sobremesas exclusivas em Curitiba",
+    images: ["/assets/velvet.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code", // Adicione seu código de verificação do Google Search Console
+  },
+};
 
 const jost = Jost({
-  subsets: ['latin'],
-  display: 'swap',
-})
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={jost.className} suppressHydrationWarning>
+    <html lang="pt-BR" className={jost.className} suppressHydrationWarning>
+      <head>
+        <StructuredData />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#8B4513" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Velvet Bolo" />
+        <link rel="apple-touch-icon" href="/icon.png" />
+      </head>
       <body className="flex min-h-screen flex-col">
         <Header />
         <main className="mx-auto w-full flex-grow">{children}</main>
@@ -42,5 +104,5 @@ export default function RootLayout({
         </Link>
       </body>
     </html>
-  )
+  );
 }

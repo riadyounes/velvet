@@ -1,15 +1,15 @@
-import { AlignJustify } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { AlignJustify } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-import { NavLink } from './nav-link'
+import { NavLink } from "./nav-link";
 import {
   Sheet,
   SheetClose,
   SheetContent,
   SheetHeader,
   SheetTrigger,
-} from './ui/sheet'
+} from "./ui/sheet";
 
 export function Header() {
   return (
@@ -26,7 +26,7 @@ export function Header() {
 
         <nav className="hidden gap-8 lg:flex">
           <NavLink
-            href="/about"
+            href="/sobre"
             className="font-medium text-zinc-500 transition-colors hover:text-brand-700 data-[current=true]:font-bold data-[current=true]:text-brand-700"
           >
             Sobre
@@ -81,7 +81,7 @@ export function Header() {
             </SheetClose>
             <SheetClose asChild>
               <NavLink
-                href="/about"
+                href="/sobre"
                 className="font-medium text-white transition-colors"
               >
                 Sobre
@@ -99,5 +99,5 @@ export function Header() {
         </Sheet>
       </div>
     </div>
-  )
+  );
 }
