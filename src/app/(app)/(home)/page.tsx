@@ -22,15 +22,17 @@ export default function HomePage() {
             <h2 className="mb-6 text-4xl font-light text-brand-700 md:text-5xl">
               NOSSA LOJA
             </h2>
-            {/* <h4 className="mx-auto mb-4 max-w-[400px] text-lg font-semibold md:mx-0">
-              Há 10 anos confeitamos sabores únicos para comemorações e
-              presentes criativos.
-            </h4> */}
             <p className="mx-auto max-w-[500px] md:mx-0">
-              Bem-vindo à Velvet, a confeitaria onde cada bolo é uma obra de
-              arte criada com amor e dedicação por Isabel. Nossa missão é adoçar
-              os momentos especiais da sua vida com sabores inesquecíveis e
-              qualidade incomparável.
+              A Velvet é mais do que uma confeitaria — é um cantinho acolhedor
+              localizado no Centro de Curitiba, onde cada detalhe foi pensado
+              para fazer você se sentir em casa. Nossa loja tem cheiro de bolo
+              saindo do forno, café passado na hora e um jardim que encanta. E,
+              claro, também temos a nossa Monalisa comendo um Red Velvet, porque
+              aqui a arte também é doce.
+            </p>
+            <p className="mx-auto max-w-[500px] md:mx-0">
+              É o tipo de lugar onde o tempo desacelera e cada fatia é um
+              convite pra viver um momento doce, leve e inesquecível.
             </p>
             <div className="mt-8">
               <Link href="/about">
@@ -63,16 +65,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3">
             {[
               {
-                title: 'Sabores Irresistíveis',
-                text: 'Oferecemos uma variedade de bolos que vão desde os clássicos, como chocolate e baunilha, até combinações exclusivas.',
+                title: 'Qualidade e cuidado em cada ingrediente ',
               },
               {
-                title: 'Atendimento Personalizado',
-                text: 'Nossa equipe está sempre pronta para auxiliar na escolha do bolo perfeito, garantindo que cada detalhe seja conforme o desejado.',
+                title: 'Sabores equilibrados, com a doçura na medida certa',
               },
               {
-                title: 'Entrega Rápida',
-                text: 'Sabemos da importância de receber seu bolo no momento certo. Por isso, contamos com um serviço de entrega eficiente para que tudo saia conforme o planejado.',
+                title: 'Atendimento atencioso em cada detalhe',
               },
             ].map((item, index) => (
               <div key={index} className="flex flex-col items-center">
@@ -80,7 +79,6 @@ export default function HomePage() {
                 <h2 className="text-lg font-semibold text-brand-950">
                   {item.title}
                 </h2>
-                <p className="leading-7">{item.text}</p>
               </div>
             ))}
           </div>
@@ -106,10 +104,10 @@ export default function HomePage() {
                   FESTAS E EVENTOS
                 </h2>
                 <p className="mb-4 max-w-[600px] text-lg font-normal leading-8">
-                  Nossa equipe está sempre pronta para tornar o seu evento
-                  especial, seja casamento, evento corporativo ou pequenas
-                  comemorações. Acreditamos que todas as ocasiões merecem ser
-                  celebradas em grande estilo.
+                  Seja casamento, aniversário, festa ou aquele encontro
+                  especial, a gente tá aqui pra ajudar a tornar tudo ainda mais
+                  especial. Fale com a gente pra saber como fazer a sua
+                  celebração ficar do jeitinho Velvet!
                 </p>
                 {/* <Link href="/eventos">
                   <Button
@@ -134,11 +132,16 @@ export default function HomePage() {
                 NOSSA CHEF
               </h2>
               <p className="mb-6 max-w-[500px] font-medium leading-8 text-gray-700">
-                Com um toque contemporâneo, Mariana Abouhamad reinventa
-                sobremesas clássicas, valorizando os ricos ingredientes
-                brasileiros. Como ela mesmo diz, &quot;um evento pode estar
-                cheio de momentos emocionantes e especiais, mas a mesa de doces
-                traz consigo um dos mais gostosos!&quot;
+                <span className="font-semibold text-brand-900">
+                  Isabel Badalotti
+                </span>{' '}
+                é o coração da Velvet. Foi na cozinha que ela transformou uma
+                receita em um sonho e, depois, em realidade. É ela quem testa,
+                ajusta e aprova cada detalhe: da massa ao recheio, da decoração
+                ao atendimento. Seu olhar sensível e criativo está presente em
+                tudo — nos sabores, nas escolhas da loja, no carinho com os
+                clientes. Cada bolo da Velvet carrega um pouco da Isabel: firme
+                no propósito, suave na forma, doce na medida certa.
               </p>
               <Link href="/sobre-chef">
                 <Button

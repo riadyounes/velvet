@@ -29,16 +29,19 @@ export default function AboutPage() {
               Nossa História
             </h2>
             <p className="mb-4 text-gray-600">
-              A Velvet nasceu em 2010 da paixão de Maria Silva por criar bolos
-              deliciosos e visualmente deslumbrantes. O que começou como um
-              hobby na cozinha de casa rapidamente se transformou em um negócio
-              próspero, graças ao sabor único e à qualidade incomparável dos
-              nossos bolos.
+              Somos uma confeitaria curitibana especializada em bolos. A Velvet
+              nasceu inspirada no Red Velvet. Ele foi o ponto de partida da
+              nossa história, e até hoje é o nosso carro-chefe. Mas não paramos
+              por aí. A partir dele, criamos sabores únicos, com receitas
+              pensadas para serem mais equilibradas no paladar e que transformam
+              qualquer dia comum em algo especial. Cada bolo é feito com
+              ingredientes de qualidade, muito cuidado e amor.
             </p>
             <p className="text-gray-600">
-              Hoje, a Velvet é reconhecida como uma das melhores confeitarias
-              artesanais da cidade, continuando a inovar e encantar nossos
-              clientes com criações únicas e saborosas.
+              Mais do que vender bolos, queremos oferecer uma experiência aos
+              nossos clientes. Nossa missão é adoçar a vida com afeto e
+              autenticidade. Bem-vindo à Velvet. Aqui, cada pedaço conta uma
+              história.
             </p>
           </div>
           <div className="flex justify-center lg:justify-end">

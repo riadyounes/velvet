@@ -33,7 +33,7 @@ export default function RootLayout({
         <main className="mx-auto w-full flex-grow">{children}</main>
         <Footer />
         <Link
-          href="https://wa.me/554199422377"
+          href="https://wa.me/554199422377?text=Olá! Quero fazer um pedido com a Velvet. Gostaria de mais informações. Vocês podem me ajudar?"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-4 right-4 rounded-full bg-green-500 p-3 text-white shadow-lg transition-all hover:bg-green-600"
