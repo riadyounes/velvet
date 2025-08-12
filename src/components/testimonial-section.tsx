@@ -158,7 +158,7 @@ export default function TestimonialSection() {
             <Button
               onClick={() =>
                 window.open(
-                  'https://www.google.com/search?sca_esv=2e47c951dd57c6d7&sxsrf=AE3TifMvZQvPXA8laPvIrFRumjQV09cpYA:1754929692666&q=velvet+bolo+curitiba&sa=X&ved=2ahUKEwi2sb_HloOPAxX8LLkGHfKyLjIQrrQLegQIGRAA&biw=1492&bih=854&dpr=2',
+                  'https://www.google.com/search?sca_esv=2e47c951dd57c6d7&sxsrf=AE3TifMvZQvPXA8laPvIrFRumjQV09cpYA:1754929692666&q=velvet+bolo+curitiba&sa=X&ved=2ahUKEwi2sb_HloOPAxX8LLkGHfKyLjIQrrQLegQIGRAA&biw=1492&bih=854&dpr=2#lrd=0x61684cae1dd3c247:0x573045687ffa6a65,1',
                   '_blank',
                 )
               }

@@ -71,7 +71,7 @@ export default function Footer() {
               </NavLink>
 
               <NavLink
-                href="/contact"
+                href="/contato"
                 className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
               >
                 Contato

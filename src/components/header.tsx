@@ -46,7 +46,7 @@ export function Header() {
             Cardápio
           </NavLink>
           <NavLink
-            href="/contact"
+            href="/contato"
             className="font-medium text-zinc-500 transition-colors hover:text-brand-700 data-[current=true]:font-bold data-[current=true]:text-brand-700"
           >
             Contato
@@ -89,7 +89,7 @@ export function Header() {
             </SheetClose>
             <SheetClose asChild>
               <NavLink
-                href="/contact"
+                href="/contato"
                 className="font-medium text-white transition-colors"
               >
                 Contato
