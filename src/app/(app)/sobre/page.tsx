@@ -5,8 +5,10 @@ import ImageGallery from '@/components/image-gallery'
 
 export const metadata: Metadata = {
   title: 'Sobre',
-  description: 'Conheça a história da Velvet Bolo, nossa confeitaria especializada em Red Velvet e bolos artesanais em Curitiba. Qualidade e tradição em cada receita.',
-  keywords: 'red velvet, velvet, bolos sob encomenda, pronta entrega, bolo inteiro, experiencia, melhor, mais vendido, velvet cake, bolo de pote, bolo em fatia, café, cafeteria, bolo de abacaxi com coco, chocolate, vintage cake, bolo decorado, confeitaria Curitiba, bolos artesanais, história, tradição',
+  description:
+    'Conheça a história da Velvet Bolo, nossa confeitaria especializada em Red Velvet e bolos artesanais em Curitiba. Qualidade e tradição em cada receita.',
+  keywords:
+    'red velvet, velvet, bolos sob encomenda, pronta entrega, bolo inteiro, experiencia, melhor, mais vendido, velvet cake, bolo de pote, bolo em fatia, café, cafeteria, bolo de abacaxi com coco, chocolate, vintage cake, bolo decorado, confeitaria Curitiba, bolos artesanais, história, tradição',
 }
 
 export default function SobrePage() {

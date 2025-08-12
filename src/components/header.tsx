@@ -32,7 +32,7 @@ export function Header() {
             Sobre
           </NavLink>
           <NavLink
-            href="https://velvet-1.goomer.app/menu?fbclid=PAY2xjawI3E6RleHRuA2FlbQIxMAABplcwotZcbQLuvYxrWlqzpinSOPmQ3YBVW8V7fj3CUwdaJ6xe_2JWLxwuHg_aem_gYO1HPjGeMW3XBmPqg_tUw"
+            href="/bolos"
             target="_blank"
             className="font-medium text-zinc-500 transition-colors hover:text-brand-700 data-[current=true]:text-brand-700"
           >

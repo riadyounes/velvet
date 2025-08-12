@@ -44,7 +44,7 @@ const sabores = [
   },
   {
     nome: 'Coffee Velvet',
-    cor: 'border-amber-700 shadow-amber-200',
+    cor: ' border-amber-900 shadow-amber-200',
     imagem: '/assets/bolo-3.jpg',
     alt: 'Bolo Coffee Velvet da Velvet Bolo - Massa de café com sabor intenso',
   },
@@ -56,13 +56,13 @@ const sabores = [
   },
   {
     nome: 'Martha Velvet',
-    cor: 'border-purple-500 shadow-purple-200',
+    cor: 'border-amber-700 shadow-amber-200',
     imagem: '/assets/bolo-sobre.png',
     alt: 'Bolo Martha Velvet da Velvet Bolo - Massa roxa com recheio especial',
   },
   {
     nome: 'Tropical Velvet',
-    cor: 'border-green-500 shadow-green-200',
+    cor: 'border-yellow-400 shadow-yellow-200',
     imagem: '/assets/bolo2.jpg',
     alt: 'Bolo Tropical Velvet da Velvet Bolo - Massa verde com sabores tropicais',
   },
@@ -74,7 +74,7 @@ const sabores = [
   },
   {
     nome: 'Rainbow Velvet',
-    cor: 'border-gradient-to-r from-red-500 via-yellow-500 to-blue-500 shadow-rainbow',
+    cor: 'border-4 border-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500  shadow-rainbow',
     imagem: '/assets/velvet.jpg',
     alt: 'Bolo Rainbow Velvet da Velvet Bolo - Massa colorida com cores vibrantes',
   },
