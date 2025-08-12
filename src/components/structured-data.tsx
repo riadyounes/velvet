@@ -20,8 +20,35 @@ export default function StructuredData() {
     },
     openingHours: 'Mo-Sa 09:00-18:00',
     priceRange: '$$',
-    servesCuisine: ['Brasileira', 'Confeitaria'],
+    servesCuisine: ['Brasileira', 'Confeitaria', 'Red Velvet', 'Velvet Cake'],
     hasMenu: 'https://velvet-one.vercel.app/nossos-bolos',
+    keywords: 'red velvet, velvet, bolos sob encomenda, pronta entrega, bolo inteiro, experiencia, melhor, mais vendido, velvet cake, bolo de pote, bolo em fatia, café, cafeteria, bolo de abacaxi com coco, chocolate, vintage cake, bolo decorado',
+    makesOffer: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Product',
+          name: 'Red Velvet Cake',
+          description: 'Bolo Red Velvet artesanal, nosso carro-chefe'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Product',
+          name: 'Bolos Sob Encomenda',
+          description: 'Bolos personalizados para festas e eventos'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Product',
+          name: 'Bolos Pronta Entrega',
+          description: 'Bolos disponíveis para entrega imediata'
+        }
+      }
+    ],
     image: [
       'https://velvet-one.vercel.app/assets/velvet.jpg',
       'https://velvet-one.vercel.app/assets/bolo2.jpg',

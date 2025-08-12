@@ -78,12 +78,31 @@ verification: {
 
 ## 🔍 Palavras-chave Principais
 
+### Específicas da Velvet
+
+- "red velvet"
+- "velvet cake"
+- "velvet bolo"
+- "bolos sob encomenda"
+- "pronta entrega"
+- "bolo inteiro"
+- "experiencia"
+- "melhor"
+- "mais vendido"
+- "bolo de pote"
+- "bolo em fatia"
+- "bolo de abacaxi com coco"
+- "vintage cake"
+- "bolo decorado"
+
 ### Local
 
 - "confeitaria Curitiba"
 - "bolos artesanais Curitiba"
 - "doces Curitiba"
 - "bolos de casamento Curitiba"
+- "café Curitiba"
+- "cafeteria Curitiba"
 
 ### Gerais
 
@@ -91,6 +110,9 @@ verification: {
 - "confeitaria artesanal"
 - "doces para festas"
 - "bolos personalizados"
+- "chocolate"
+- "café"
+- "cafeteria"
 
 ## 📊 Monitoramento
 

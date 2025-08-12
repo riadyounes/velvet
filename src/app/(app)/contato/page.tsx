@@ -5,6 +5,8 @@ import { ContactForm } from './contact-form'
 
 export const metadata: Metadata = {
   title: 'Contato',
+  description: 'Entre em contato com a Velvet Bolo em Curitiba. Encomendas, informações e localização. Bolos artesanais e confeitaria de qualidade.',
+  keywords: 'red velvet, velvet, bolos sob encomenda, pronta entrega, bolo inteiro, experiencia, melhor, mais vendido, velvet cake, bolo de pote, bolo em fatia, café, cafeteria, bolo de abacaxi com coco, chocolate, vintage cake, bolo decorado, contato Velvet Bolo, encomendas, Curitiba, confeitaria',
 }
 
 export default function ContactPage() {

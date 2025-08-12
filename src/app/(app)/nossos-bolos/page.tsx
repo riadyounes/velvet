@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     'Descubra nossa seleção especial de bolos velvet artesanais em Curitiba. Red Velvet, Pink Velvet, Coffee Velvet e muito mais!',
   keywords:
-    'bolos velvet Curitiba, red velvet, pink velvet, coffee velvet, black velvet, bolos artesanais, confeitaria Curitiba',
+    'red velvet, velvet, bolos sob encomenda, pronta entrega, bolo inteiro, experiencia, melhor, mais vendido, velvet cake, bolo de pote, bolo em fatia, café, cafeteria, bolo de abacaxi com coco, chocolate, vintage cake, bolo decorado, bolos velvet Curitiba, pink velvet, coffee velvet, black velvet, bolos artesanais, confeitaria Curitiba',
   openGraph: {
     title: 'Nossos Bolos - Velvet Bolo',
     description:

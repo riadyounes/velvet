@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     'Velvet Bolo: Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Qualidade premium, sabores únicos e atendimento personalizado para festas e eventos.',
   keywords:
-    'confeitaria, bolos artesanais, doces, sobremesas, Curitiba, festas, eventos, bolos de casamento, bolos de aniversário, confeitaria artesanal',
+    'red velvet, velvet, bolos sob encomenda, pronta entrega, bolo inteiro, experiencia, melhor, mais vendido, velvet cake, bolo de pote, bolo em fatia, café, cafeteria, bolo de abacaxi com coco, chocolate, vintage cake, bolo decorado, confeitaria, bolos artesanais, doces, sobremesas, Curitiba, festas, eventos, bolos de casamento, bolos de aniversário, confeitaria artesanal, jardim, bolos',
   authors: [{ name: 'Velvet Bolo' }],
   creator: 'Velvet Bolo',
   publisher: 'Velvet Bolo',
