@@ -33,7 +33,6 @@ export function Header() {
           </NavLink>
           <NavLink
             href="/bolos"
-            target="_blank"
             className="font-medium text-zinc-500 transition-colors hover:text-brand-700 data-[current=true]:text-brand-700"
           >
             Bolos
@@ -63,11 +62,18 @@ export function Header() {
             </SheetHeader>
             <SheetClose asChild>
               <NavLink
-                href="https://velvet-1.goomer.app/menu?fbclid=PAY2xjawI3E6RleHRuA2FlbQIxMAABplcwotZcbQLuvYxrWlqzpinSOPmQ3YBVW8V7fj3CUwdaJ6xe_2JWLxwuHg_aem_gYO1HPjGeMW3XBmPqg_tUw"
-                target="_blank"
+                href="/sobre"
                 className="font-medium text-white transition-colors"
               >
-                Produtos da loja
+                Sobre
+              </NavLink>
+            </SheetClose>
+            <SheetClose asChild>
+              <NavLink
+                href="/bolos"
+                className="font-medium text-white transition-colors"
+              >
+                Bolos
               </NavLink>
             </SheetClose>
             <SheetClose asChild>
@@ -76,15 +82,7 @@ export function Header() {
                 target="_blank"
                 className="font-medium text-white transition-colors"
               >
-                Bolos festivos
-              </NavLink>
-            </SheetClose>
-            <SheetClose asChild>
-              <NavLink
-                href="/sobre"
-                className="font-medium text-white transition-colors"
-              >
-                Sobre
+                Cardápio
               </NavLink>
             </SheetClose>
             <SheetClose asChild>
