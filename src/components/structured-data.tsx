@@ -5,7 +5,7 @@ export default function StructuredData() {
     name: 'Velvet Bolo',
     description:
       'Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Qualidade premium e sabores únicos para festas e eventos.',
-    url: 'https://velvet-one.vercel.app',
+    url: 'https://www.velvetbolo.com.br',
     telephone: '+554199422377',
     address: {
       '@type': 'PostalAddress',
@@ -21,7 +21,7 @@ export default function StructuredData() {
     openingHours: 'Mo-Sa 09:00-18:00',
     priceRange: '$$',
     servesCuisine: ['Brasileira', 'Confeitaria', 'Red Velvet', 'Velvet Cake'],
-    hasMenu: 'https://velvet-one.vercel.app/nossos-bolos',
+    hasMenu: 'https://www.velvetbolo.com.br/bolos',
     keywords:
       'red velvet, velvet, bolos sob encomenda, pronta entrega, bolo inteiro, experiencia, melhor, mais vendido, velvet cake, bolo de pote, bolo em fatia, café, cafeteria, bolo de abacaxi com coco, chocolate, vintage cake, bolo decorado',
     makesOffer: [
@@ -51,9 +51,9 @@ export default function StructuredData() {
       },
     ],
     image: [
-      'https://velvet-one.vercel.app/assets/velvet.jpg',
-      'https://velvet-one.vercel.app/assets/bolo2.jpg',
-      'https://velvet-one.vercel.app/assets/bolo-sobre.png',
+      'https://www.velvetbolo.com.br/assets/velvet.jpg',
+      'https://www.velvetbolo.com.br/assets/bolo2.jpg',
+      'https://www.velvetbolo.com.br/assets/bolo-sobre.png',
     ],
     sameAs: ['https://wa.me/554199422377'],
     founder: {

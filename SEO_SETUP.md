@@ -39,6 +39,8 @@
 verification: {
   google: 'SEU_CODIGO_AQUI',
 }
+
+# URL do site: https://www.velvetbolo.com.br
 ```
 
 ### 2. Google Analytics

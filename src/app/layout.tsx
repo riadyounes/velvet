@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://velvet-one.vercel.app'),
+  metadataBase: new URL('https://www.velvetbolo.com.br'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://velvet-one.vercel.app',
+    url: 'https://www.velvetbolo.com.br',
     siteName: 'Velvet Bolo',
     title: 'Velvet Bolo - Bolos Artesanais em Curitiba',
     description:
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code', // Adicione seu código de verificação do Google Search Console
+    google: process.env.GA_MEASUREMENT_ID,
   },
 }
 

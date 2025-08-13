@@ -3,25 +3,25 @@ import type { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://velvet-one.vercel.app',
+      url: 'https://www.velvetbolo.com.br',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://velvet-one.vercel.app/sobre',
+      url: 'https://www.velvetbolo.com.br/sobre',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: 'https://velvet-one.vercel.app/nossos-bolos',
+      url: 'https://www.velvetbolo.com.br/nossos-bolos',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: 'https://velvet-one.vercel.app/contato',
+      url: 'https://www.velvetbolo.com.br/contato',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
