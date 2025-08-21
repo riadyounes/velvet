@@ -1,75 +1,87 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import { useState } from 'react'
+import Image from "next/image";
+import { useState } from "react";
 
-import { Dialog, DialogContent } from '@/components/ui/dialog'
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+
+interface GalleryImage {
+  id: number;
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+interface ImageGalleryProps {
+  images?: GalleryImage[];
+}
 
 // Sample image data - replace with your actual image data
-const galleryImages = [
+const defaultGalleryImages: GalleryImage[] = [
   {
     id: 1,
-    src: '/assets/bolo2.jpg',
-    alt: 'Bolos',
+    src: "/assets/bolo2.jpg",
+    alt: "Bolos",
     width: 800,
     height: 600,
   },
   {
     id: 2,
-    src: '/assets/bolo-happy.jpg',
-    alt: 'Bolo de aniversário',
+    src: "/assets/bolo-happy.jpg",
+    alt: "Bolo de aniversário",
     width: 800,
     height: 600,
   },
   {
     id: 3,
-    src: '/assets/entrada-loja.jpg',
-    alt: 'Entrada da loja',
+    src: "/assets/entrada-loja.jpg",
+    alt: "Entrada da loja",
     width: 800,
     height: 600,
   },
   {
     id: 4,
-    src: '/assets/bolo-3.jpg',
-    alt: 'Bolo e café',
+    src: "/assets/bolo-3.jpg",
+    alt: "Bolo e café",
     width: 800,
     height: 600,
   },
   {
     id: 5,
-    src: '/assets/bolo-red.jpg',
-    alt: 'Bolo red',
+    src: "/assets/bolo-red.jpg",
+    alt: "Bolo red",
     width: 800,
     height: 600,
   },
   {
     id: 6,
-    src: '/assets/bolo-black.jpg',
-    alt: 'Bolo black',
+    src: "/assets/bolo-black.jpg",
+    alt: "Bolo black",
     width: 800,
     height: 600,
   },
-]
+];
 
-export default function ImageGallery() {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null)
+export default function ImageGallery({
+  images = defaultGalleryImages,
+}: ImageGalleryProps) {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const openLightbox = (imageId: number) => {
-    setSelectedImage(imageId)
-  }
+    setSelectedImage(imageId);
+  };
 
   const closeLightbox = () => {
-    setSelectedImage(null)
-  }
+    setSelectedImage(null);
+  };
 
-  const selectedImageData = galleryImages.find(
-    (img) => img.id === selectedImage,
-  )
+  const selectedImageData = images.find((img) => img.id === selectedImage);
 
   return (
     <div className="container mx-auto py-8">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {galleryImages.map((image) => (
+        {images.map((image) => (
           <div
             key={image.id}
             className="group relative cursor-pointer overflow-hidden rounded-lg"
@@ -77,7 +89,7 @@ export default function ImageGallery() {
           >
             <div className="relative aspect-square">
               <Image
-                src={image.src || '/placeholder.svg'}
+                src={image.src || "/placeholder.svg"}
                 alt={image.alt}
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -98,7 +110,7 @@ export default function ImageGallery() {
           {selectedImageData && (
             <div className="relative flex max-h-[80vh] w-full items-center justify-center">
               <Image
-                src={selectedImageData.src || '/placeholder.svg'}
+                src={selectedImageData.src || "/placeholder.svg"}
                 alt={selectedImageData.alt}
                 width={selectedImageData.width}
                 height={selectedImageData.height}
@@ -109,5 +121,5 @@ export default function ImageGallery() {
         </DialogContent>
       </Dialog>
     </div>
-  )
+  );
 }

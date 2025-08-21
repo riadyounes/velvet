@@ -1,15 +1,15 @@
-import { AlignJustify } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { AlignJustify } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-import { NavLink } from './nav-link'
+import { NavLink } from "./nav-link";
 import {
   Sheet,
   SheetClose,
   SheetContent,
   SheetHeader,
   SheetTrigger,
-} from './ui/sheet'
+} from "./ui/sheet";
 
 export function Header() {
   return (
@@ -30,6 +30,12 @@ export function Header() {
             className="font-medium text-zinc-500 transition-colors hover:text-brand-700 data-[current=true]:font-bold data-[current=true]:text-brand-700"
           >
             Sobre
+          </NavLink>
+          <NavLink
+            href="/nosso-espaco"
+            className="font-medium text-zinc-500 transition-colors hover:text-brand-700 data-[current=true]:font-bold data-[current=true]:text-brand-700"
+          >
+            Nosso Espaço
           </NavLink>
           <NavLink
             href="/bolos"
@@ -70,6 +76,14 @@ export function Header() {
             </SheetClose>
             <SheetClose asChild>
               <NavLink
+                href="/nosso-espaco"
+                className="font-medium text-white transition-colors"
+              >
+                Nosso Espaço
+              </NavLink>
+            </SheetClose>
+            <SheetClose asChild>
+              <NavLink
                 href="/bolos"
                 className="font-medium text-white transition-colors"
               >
@@ -97,5 +111,5 @@ export function Header() {
         </Sheet>
       </div>
     </div>
-  )
+  );
 }

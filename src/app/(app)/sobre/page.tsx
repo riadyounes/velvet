@@ -1,15 +1,21 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
+import type { Metadata } from "next";
+import Image from "next/image";
 
-import ImageGallery from '@/components/image-gallery'
+import ImageGallery from "@/components/image-gallery";
 
 export const metadata: Metadata = {
-  title: 'Sobre',
+  title: "Sobre",
   description:
-    'Conheça a história da Velvet Bolo, nossa confeitaria especializada em Red Velvet e bolos artesanais em Curitiba. Qualidade e tradição em cada receita.',
+    "Conheça a história da Velvet Bolo em Curitiba. Nossa confeitaria especializada em Red Velvet e bolos artesanais. Qualidade, tradição e amor em cada receita desde o início.",
   keywords:
-    'red velvet, velvet, bolos sob encomenda, pronta entrega, bolo inteiro, experiencia, melhor, mais vendido, velvet cake, bolo de pote, bolo em fatia, café, cafeteria, bolo de abacaxi com coco, chocolate, vintage cake, bolo decorado, confeitaria Curitiba, bolos artesanais, história, tradição',
-}
+    "história Velvet Bolo, confeitaria Curitiba, Red Velvet Curitiba, bolos artesanais, confeitaria artesanal, Isabel Badalotti, chef confeitaria, confeitaria tradicional, bolos sob encomenda, confeitaria centro Curitiba, bolos velvet, confeitaria de qualidade, tradição confeitaria, bolos artesanais Curitiba",
+  openGraph: {
+    title: "Sobre a Velvet Bolo - História e Tradição em Curitiba",
+    description:
+      "Conheça a história da Velvet Bolo em Curitiba. Nossa confeitaria especializada em Red Velvet e bolos artesanais com qualidade e tradição.",
+    images: ["/assets/dona.jpg", "/assets/bolo2.jpg"],
+  },
+};
 
 export default function SobrePage() {
   return (
@@ -62,5 +68,5 @@ export default function SobrePage() {
         <ImageGallery />
       </div>
     </div>
-  )
+  );
 }

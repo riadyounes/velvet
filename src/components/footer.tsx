@@ -1,8 +1,8 @@
-import { Instagram, Phone } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { Instagram, Phone } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-import { NavLink } from './nav-link'
+import { NavLink } from "./nav-link";
 
 export default function Footer() {
   return (
@@ -64,12 +64,24 @@ export default function Footer() {
                 Sobre nós
               </NavLink>
               <NavLink
-                href="/menu"
+                href="/nosso-espaco"
+                className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
+              >
+                Nosso Espaço
+              </NavLink>
+              <NavLink
+                href="/bolos"
+                className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
+              >
+                Bolos
+              </NavLink>
+              <NavLink
+                href="https://velvet.goomer.app/menu?fbclid=PAY2xjawI3Ew5leHRuA2FlbQIxMAABpqj83g3KHA4vMpQN3qOZLvO6UosJkmT4NMhugkkJMXauxMbOO0Bo5VgAyw_aem_7v5pAHqkfNsG4KxqazuzVg"
+                target="_blank"
                 className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
               >
                 Cardápio
               </NavLink>
-
               <NavLink
                 href="/contato"
                 className="font-medium text-brand-100 transition-colors hover:text-brand-200 data-[current=true]:text-white"
@@ -88,5 +100,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

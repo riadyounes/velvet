@@ -1,57 +1,59 @@
-import './globals.css'
+import "./globals.css";
 
-import { MessageCircle } from 'lucide-react'
-import type { Metadata } from 'next'
-import { Jost } from 'next/font/google'
-import Link from 'next/link'
+import { MessageCircle } from "lucide-react";
+import type { Metadata } from "next";
+import { Jost } from "next/font/google";
+import Link from "next/link";
 
-import Footer from '@/components/footer'
-import { Header } from '@/components/header'
-import StructuredData from '@/components/structured-data'
+import Footer from "@/components/footer";
+import { Header } from "@/components/header";
+import StructuredData from "@/components/structured-data";
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Velvet Bolo - Bolos Artesanais em Curitiba',
-    default: 'Velvet Bolo - Bolos Artesanais e Doces em Curitiba',
+    template: "%s | Velvet Bolo - Bolos Artesanais em Curitiba",
+    default: "Velvet Bolo - Bolos Artesanais e Doces em Curitiba | Red Velvet",
   },
   description:
-    'Velvet Bolo: Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Qualidade premium, sabores únicos e atendimento personalizado para festas e eventos.',
+    "Velvet Bolo: Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Red Velvet, Pink Velvet e sabores únicos. Qualidade premium, sabores únicos e atendimento personalizado para festas e eventos.",
   keywords:
-    'red velvet, velvet, bolos sob encomenda, pronta entrega, bolo inteiro, experiencia, melhor, mais vendido, velvet cake, bolo de pote, bolo em fatia, café, cafeteria, bolo de abacaxi com coco, chocolate, vintage cake, bolo decorado, confeitaria, bolos artesanais, doces, sobremesas, Curitiba, festas, eventos, bolos de casamento, bolos de aniversário, confeitaria artesanal, jardim, bolos',
-  authors: [{ name: 'Velvet Bolo' }],
-  creator: 'Velvet Bolo',
-  publisher: 'Velvet Bolo',
+    "Velvet Bolo Curitiba, bolos artesanais Curitiba, Red Velvet Curitiba, confeitaria artesanal, bolos sob encomenda, bolos para festas, bolos de aniversário, bolos de casamento, doces artesanais, sobremesas exclusivas, confeitaria centro Curitiba, bolos velvet, pink velvet, coffee velvet, black velvet, confeitaria de qualidade, bolos artesanais Curitiba, confeitaria Curitiba",
+  authors: [{ name: "Velvet Bolo" }],
+  creator: "Velvet Bolo",
+  publisher: "Velvet Bolo",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://www.velvetbolo.com.br'),
+  metadataBase: new URL("https://www.velvetbolo.com.br"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
-    type: 'website',
-    locale: 'pt_BR',
-    url: 'https://www.velvetbolo.com.br',
-    siteName: 'Velvet Bolo',
-    title: 'Velvet Bolo - Bolos Artesanais em Curitiba',
+    type: "website",
+    locale: "pt_BR",
+    url: "https://www.velvetbolo.com.br",
+    siteName: "Velvet Bolo",
+    title:
+      "Velvet Bolo - Bolos Artesanais em Curitiba | Red Velvet e Sabores Únicos",
     description:
-      'Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Qualidade premium e sabores únicos para suas celebrações.',
+      "Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Red Velvet, Pink Velvet e sabores únicos com qualidade premium para suas celebrações.",
     images: [
       {
-        url: '/assets/velvet.jpg',
+        url: "/assets/velvet.jpg",
         width: 1200,
         height: 630,
-        alt: 'Velvet Confeitaria - Bolos Artesanais',
+        alt: "Velvet Confeitaria - Bolos Artesanais em Curitiba",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Velvet Bolo - Bolos Artesanais em Curitiba',
-    description: 'Bolos artesanais, doces e sobremesas exclusivas em Curitiba',
-    images: ['/assets/velvet.jpg'],
+    card: "summary_large_image",
+    title: "Velvet Bolo - Bolos Artesanais em Curitiba | Red Velvet",
+    description:
+      "Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Red Velvet e sabores únicos com qualidade premium.",
+    images: ["/assets/velvet.jpg"],
   },
   robots: {
     index: true,
@@ -59,25 +61,25 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
     google: process.env.GA_MEASUREMENT_ID,
   },
-}
+};
 
 const jost = Jost({
-  subsets: ['latin'],
-  display: 'swap',
-})
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="pt-BR" className={jost.className} suppressHydrationWarning>
@@ -104,5 +106,5 @@ export default function RootLayout({
         </Link>
       </body>
     </html>
-  )
+  );
 }
