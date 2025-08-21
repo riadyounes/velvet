@@ -28,7 +28,9 @@ export default function Footer() {
             </h3>
             <div className="flex space-x-4">
               <Link
-                href="#"
+                href="https://www.instagram.com/velvetbolo/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-100 transition-colors hover:text-brand-300"
               >
                 <Instagram className="h-6 w-6" />
@@ -36,8 +38,9 @@ export default function Footer() {
               </Link>
               <Link
                 href="https://wa.me/554199422377"
-                className="text-gray-100 transition-colors hover:text-brand-300"
                 target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-100 transition-colors hover:text-brand-300"
               >
                 <Phone className="h-6 w-6" />
                 <span className="sr-only">WhatsApp</span>

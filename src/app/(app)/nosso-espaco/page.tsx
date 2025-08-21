@@ -55,8 +55,11 @@ export default function NossoEspacoPage() {
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {heroImages.map((image, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
-                <div className="aspect-[4/3] relative">
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-xl shadow-lg"
+              >
+                <div className="relative aspect-[4/3]">
                   <Image
                     src={image}
                     alt={`Espaço Velvet ${index + 1}`}
@@ -76,50 +79,52 @@ export default function NossoEspacoPage() {
       {/* Content Section */}
       <div className="mx-auto max-w-4xl px-6 py-16">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold text-brand-800 mb-6">
+          <h2 className="mb-6 text-3xl font-bold text-brand-800">
             Um Espaço Feito com Carinho
           </h2>
-          <p className="text-lg text-zinc-600 leading-relaxed max-w-3xl mx-auto">
-            Nossa loja é mais do que um simples estabelecimento - é um espaço acolhedor 
-            onde cada detalhe foi pensado para proporcionar uma experiência única. 
-            Localizada no coração da cidade, oferecemos um ambiente moderno e elegante 
-            que combina perfeitamente com a qualidade excepcional dos nossos bolos.
+          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-zinc-600">
+            Nossa loja é mais do que um simples estabelecimento - é um espaço
+            acolhedor onde cada detalhe foi pensado para proporcionar uma
+            experiência única. Localizada no coração da cidade, oferecemos um
+            ambiente moderno e elegante que combina perfeitamente com a
+            qualidade excepcional dos nossos bolos.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
+        <div className="mb-16 grid gap-12 md:grid-cols-2">
           <div>
-            <h3 className="text-2xl font-semibold text-brand-700 mb-4">
+            <h3 className="mb-4 text-2xl font-semibold text-brand-700">
               Ambiente Acolhedor
             </h3>
-            <p className="text-zinc-600 leading-relaxed">
-              Nosso espaço foi projetado para ser acolhedor e convidativo, com uma 
-              decoração que reflete a elegância e sofisticação dos nossos produtos. 
-              Cada canto da loja foi cuidadosamente planejado para criar uma atmosfera 
-              que faz nossos clientes se sentirem em casa.
+            <p className="leading-relaxed text-zinc-600">
+              Nosso espaço foi projetado para ser acolhedor e convidativo, com
+              uma decoração que reflete a elegância e sofisticação dos nossos
+              produtos. Cada canto da loja foi cuidadosamente planejado para
+              criar uma atmosfera que faz nossos clientes se sentirem em casa.
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold text-brand-700 mb-4">
+            <h3 className="mb-4 text-2xl font-semibold text-brand-700">
               Atendimento Personalizado
             </h3>
-            <p className="text-zinc-600 leading-relaxed">
-              Nossa equipe está sempre pronta para oferecer um atendimento personalizado 
-              e atencioso. Queremos que cada visita seja uma experiência memorável, 
-              onde você possa descobrir novos sabores e encontrar o bolo perfeito para 
-              cada ocasião especial.
+            <p className="leading-relaxed text-zinc-600">
+              Nossa equipe está sempre pronta para oferecer um atendimento
+              personalizado e atencioso. Queremos que cada visita seja uma
+              experiência memorável, onde você possa descobrir novos sabores e
+              encontrar o bolo perfeito para cada ocasião especial.
             </p>
           </div>
         </div>
 
-        <div className="text-center mb-16">
-          <h3 className="text-2xl font-semibold text-brand-700 mb-6">
+        <div className="mb-16 text-center">
+          <h3 className="mb-6 text-2xl font-semibold text-brand-700">
             Venha nos Visitar
           </h3>
-          <p className="text-zinc-600 leading-relaxed max-w-2xl mx-auto">
-            Estamos localizados em um local de fácil acesso, com estacionamento 
-            conveniente e horários flexíveis para atender às suas necessidades. 
-            Venha conhecer nosso espaço e se encantar com a atmosfera única do Velvet.
+          <p className="mx-auto max-w-2xl leading-relaxed text-zinc-600">
+            Estamos localizados em um local de fácil acesso, com estacionamento
+            conveniente e horários flexíveis para atender às suas necessidades.
+            Venha conhecer nosso espaço e se encantar com a atmosfera única do
+            Velvet.
           </p>
         </div>
       </div>
@@ -127,7 +132,7 @@ export default function NossoEspacoPage() {
       {/* Simple Photo Gallery */}
       <div className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl font-bold text-brand-800 text-center mb-12">
+          <h2 className="mb-12 text-center text-3xl font-bold text-brand-800">
             Galeria do Nosso Espaço
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -139,8 +144,11 @@ export default function NossoEspacoPage() {
               '/assets/bg-about-2.jpg',
               '/assets/bg-contact.jpg',
             ].map((image, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg">
-                <div className="aspect-[4/3] relative">
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-lg shadow-lg"
+              >
+                <div className="relative aspect-[4/3]">
                   <Image
                     src={image}
                     alt={`Espaço Velvet ${index + 1}`}
