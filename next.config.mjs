@@ -23,18 +23,21 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
-  // Performance optimizations
+  // Performance optimizations - removed problematic experimental features
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
+  },
+
+  // Static generation and prerender settings
+  output: 'standalone',
+  trailingSlash: false,
+
+  // Disable automatic static optimization for error pages
+  staticPageGenerationTimeout: 120,
+
+  // Disable automatic static generation for problematic routes
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
   },
 
   // Headers for performance and modern formats
