@@ -2,12 +2,20 @@
 const nextConfig = {
   images: {
     remotePatterns: [{ hostname: 'plus.unsplash.com' }],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+
+    // Modern image format optimization - only supported formats
+    formats: ['image/avif', 'image/webp'],
+
+    // Advanced image optimization
+    loader: 'default',
+    path: '/_next/image',
+
+    // Responsive image optimization
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   compress: true,
   poweredByHeader: false,
@@ -19,9 +27,17 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
 
-  // Headers for performance
+  // Headers for performance and modern formats
   async headers() {
     return [
       {
@@ -52,6 +68,10 @@ const nextConfig = {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
           },
+          {
+            key: 'Accept-Encoding',
+            value: 'gzip, deflate, br',
+          },
         ],
       },
       {
@@ -60,6 +80,27 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          },
+          {
+            key: 'Accept-Encoding',
+            value: 'gzip, deflate, br',
+          },
+        ],
+      },
+      {
+        source: '/(.*).(webp|avif|jpg|jpeg|png)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+          {
+            key: 'Accept-Encoding',
+            value: 'gzip, deflate, br',
+          },
+          {
+            key: 'Vary',
+            value: 'Accept',
           },
         ],
       },

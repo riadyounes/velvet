@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import ImageGallery from '@/components/image-gallery'
 
 export const metadata: Metadata = {
   title: 'Nosso Espaço',
@@ -21,51 +20,6 @@ export const metadata: Metadata = {
 }
 
 export default function NossoEspacoPage() {
-  const espacoImages = [
-    {
-      id: 1,
-      src: '/assets/entrada-loja.jpg',
-      alt: 'Entrada da loja Velvet',
-      width: 800,
-      height: 600,
-    },
-    {
-      id: 2,
-      src: '/assets/velvet.jpg',
-      alt: 'Fachada da loja Velvet',
-      width: 800,
-      height: 600,
-    },
-    {
-      id: 3,
-      src: '/assets/bg-velvet.jpg',
-      alt: 'Ambiente interno da loja',
-      width: 800,
-      height: 600,
-    },
-    {
-      id: 4,
-      src: '/assets/bg-about.jpg',
-      alt: 'Detalhes do espaço',
-      width: 800,
-      height: 600,
-    },
-    {
-      id: 5,
-      src: '/assets/bg-about-2.jpg',
-      alt: 'Decoração da loja',
-      width: 800,
-      height: 600,
-    },
-    {
-      id: 6,
-      src: '/assets/bg-contact.jpg',
-      alt: 'Área de atendimento',
-      width: 800,
-      height: 600,
-    },
-  ]
-
   const heroImages = [
     '/assets/entrada-loja.jpg',
     '/assets/velvet.jpg',
@@ -81,8 +35,8 @@ export default function NossoEspacoPage() {
           src="/assets/bg-velvet.jpg"
           alt="Nosso espaço Velvet"
           fill
-          className="object-cover"
           priority
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center">
@@ -109,6 +63,7 @@ export default function NossoEspacoPage() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    quality={85}
                   />
                   <div className="absolute inset-0 bg-black/20 transition-opacity duration-300 group-hover:opacity-0" />
                 </div>
@@ -169,13 +124,35 @@ export default function NossoEspacoPage() {
         </div>
       </div>
 
-      {/* Photo Gallery */}
+      {/* Simple Photo Gallery */}
       <div className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="text-3xl font-bold text-brand-800 text-center mb-12">
-            Galeria Completa do Nosso Espaço
+            Galeria do Nosso Espaço
           </h2>
-          <ImageGallery images={espacoImages} />
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              '/assets/entrada-loja.jpg',
+              '/assets/velvet.jpg',
+              '/assets/bg-velvet.jpg',
+              '/assets/bg-about.jpg',
+              '/assets/bg-about-2.jpg',
+              '/assets/bg-contact.jpg',
+            ].map((image, index) => (
+              <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg">
+                <div className="aspect-[4/3] relative">
+                  <Image
+                    src={image}
+                    alt={`Espaço Velvet ${index + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={85}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
