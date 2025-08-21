@@ -1,7 +1,33 @@
+/* Critical CSS - Load first */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Performance optimizations */
 @layer base {
+  /* Optimize font rendering */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Optimize image rendering */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  /* Reduce layout shifts */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* CSS Variables for theming */
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -57,11 +83,35 @@
     --chart-5: 340 75% 55%;
   }
 }
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Performance optimizations */
+@layer utilities {
+  /* Reduce paint operations */
+  .will-change-auto {
+    will-change: auto;
+  }
+  
+  .will-change-scroll {
+    will-change: scroll-position;
+  }
+  
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  /* Optimize animations */
+  .animate-optimized {
+    animation-fill-mode: both;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 }

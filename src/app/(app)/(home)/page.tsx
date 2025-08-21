@@ -1,25 +1,25 @@
-import { Heart, Star, Users } from "lucide-react";
-import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import { Heart, Star, Users } from 'lucide-react'
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import TestimonialSection from "@/components/testimonial-section";
-import { Button } from "@/components/ui/button";
+import TestimonialSection from '@/components/testimonial-section'
+import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
-  title: "Início",
+  title: 'Início',
   description:
-    "Velvet Bolo - Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Red Velvet, Pink Velvet e sabores únicos. Qualidade premium e atendimento personalizado.",
+    'Velvet Bolo - Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Red Velvet, Pink Velvet e sabores únicos. Qualidade premium e atendimento personalizado.',
   keywords:
-    "Velvet Bolo Curitiba, bolos artesanais Curitiba, Red Velvet Curitiba, confeitaria artesanal, bolos sob encomenda, bolos para festas, bolos de aniversário, bolos de casamento, doces artesanais, sobremesas exclusivas, confeitaria centro Curitiba, bolos velvet, pink velvet, coffee velvet, black velvet, confeitaria de qualidade",
+    'Velvet Bolo Curitiba, bolos artesanais Curitiba, Red Velvet Curitiba, confeitaria artesanal, bolos sob encomenda, bolos para festas, bolos de aniversário, bolos de casamento, doces artesanais, sobremesas exclusivas, confeitaria centro Curitiba, bolos velvet, pink velvet, coffee velvet, black velvet, confeitaria de qualidade',
   openGraph: {
     title:
-      "Velvet Bolo - Bolos Artesanais em Curitiba | Red Velvet e Sabores Únicos",
+      'Velvet Bolo - Bolos Artesanais em Curitiba | Red Velvet e Sabores Únicos',
     description:
-      "Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Red Velvet, Pink Velvet e sabores únicos com qualidade premium.",
-    images: ["/assets/bolo2.jpg"],
+      'Bolos artesanais, doces e sobremesas exclusivas em Curitiba. Red Velvet, Pink Velvet e sabores únicos com qualidade premium.',
+    images: ['/assets/bolo2.jpg'],
   },
-};
+}
 
 export default function HomePage() {
   return (
@@ -29,11 +29,13 @@ export default function HomePage() {
         role="banner"
         aria-label="Hero section"
       >
-        <img
+        <Image
           src="/assets/bolo2.jpg"
           alt="Bolo artesanal da Velvet Bolo - Sobremesa gourmet com decoração elegante"
           className="h-full w-full object-cover"
           loading="eager"
+          width={1000}
+          height={500}
         />
         <div className="absolute inset-0 flex flex-col items-start justify-center bg-black/30 p-4">
           <h1 className="mb-2 text-2xl font-light text-white">EXCLUSIVIDADE</h1>
@@ -103,22 +105,22 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3">
             {[
               {
-                title: "Qualidade e cuidado em cada ingrediente",
+                title: 'Qualidade e cuidado em cada ingrediente',
                 icon: Heart,
-                description: "Ingredientes selecionados com carinho",
+                description: 'Ingredientes selecionados com carinho',
               },
               {
-                title: "Sabores equilibrados, com a doçura na medida certa",
+                title: 'Sabores equilibrados, com a doçura na medida certa',
                 icon: Star,
-                description: "Receitas testadas e aprovadas",
+                description: 'Receitas testadas e aprovadas',
               },
               {
-                title: "Atendimento atencioso em cada detalhe",
+                title: 'Atendimento atencioso em cada detalhe',
                 icon: Users,
-                description: "Foco total no cliente",
+                description: 'Foco total no cliente',
               },
             ].map((item, index) => {
-              const IconComponent = item.icon;
+              const IconComponent = item.icon
               return (
                 <div key={index} className="flex flex-col items-center">
                   <IconComponent size={42} className="mb-3 text-brand-700" />
@@ -129,7 +131,7 @@ export default function HomePage() {
                     {item.description}
                   </p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -194,7 +196,7 @@ export default function HomePage() {
               <p className="mb-6 max-w-[500px] font-medium leading-8 text-gray-700">
                 <span className="font-semibold text-brand-900">
                   Isabel Badalotti
-                </span>{" "}
+                </span>{' '}
                 é o coração da Velvet. Foi na cozinha que ela transformou uma
                 receita em um sonho e, depois, em realidade. É ela quem testa,
                 ajusta e aprova cada detalhe: da massa ao recheio, da decoração
@@ -227,5 +229,5 @@ export default function HomePage() {
       </section>
       <TestimonialSection />
     </div>
-  );
+  )
 }

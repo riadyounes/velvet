@@ -1,21 +1,21 @@
-import { CakeSlice, MapPin, Phone } from "lucide-react";
-import type { Metadata } from "next";
+import { CakeSlice, MapPin, Phone } from 'lucide-react'
+import type { Metadata } from 'next'
 
-import { ContactForm } from "./contact-form";
+import { ContactForm } from './contact-form'
 
 export const metadata: Metadata = {
-  title: "Contato",
+  title: 'Contato',
   description:
-    "Entre em contato com a Velvet Bolo em Curitiba. Encomendas, informações e localização. Bolos artesanais e confeitaria de qualidade. WhatsApp: (41) 9942-2377",
+    'Entre em contato com a Velvet Bolo em Curitiba. Encomendas, informações e localização. Bolos artesanais e confeitaria de qualidade. WhatsApp: (41) 9942-2377',
   keywords:
-    "contato Velvet Bolo, encomendas Curitiba, confeitaria centro Curitiba, bolos sob encomenda, telefone Velvet Bolo, WhatsApp Velvet, endereço confeitaria, localização Velvet Bolo, encomendas bolos, confeitaria Curitiba, bolos artesanais encomenda, confeitaria artesanal Curitiba",
+    'contato Velvet Bolo, encomendas Curitiba, confeitaria centro Curitiba, bolos sob encomenda, telefone Velvet Bolo, WhatsApp Velvet, endereço confeitaria, localização Velvet Bolo, encomendas bolos, confeitaria Curitiba, bolos artesanais encomenda, confeitaria artesanal Curitiba',
   openGraph: {
-    title: "Contato - Velvet Bolo Curitiba | Encomendas e Informações",
+    title: 'Contato - Velvet Bolo Curitiba | Encomendas e Informações',
     description:
-      "Entre em contato com a Velvet Bolo em Curitiba. Encomendas, informações e localização. Bolos artesanais e confeitaria de qualidade.",
-    images: ["/assets/bg-contact.jpg"],
+      'Entre em contato com a Velvet Bolo em Curitiba. Encomendas, informações e localização. Bolos artesanais e confeitaria de qualidade.',
+    images: ['/assets/bg-contact.jpg'],
   },
-};
+}
 
 export default function ContactPage() {
   return (
@@ -69,5 +69,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

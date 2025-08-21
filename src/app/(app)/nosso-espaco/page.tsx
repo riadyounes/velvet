@@ -1,70 +1,77 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import ImageGallery from "@/components/image-gallery";
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import ImageGallery from '@/components/image-gallery'
 
 export const metadata: Metadata = {
-  title: "Nosso Espaço",
+  title: 'Nosso Espaço',
   description:
-    "Conheça o espaço acolhedor da Velvet Bolo em Curitiba. Ambiente moderno e elegante para degustar nossos bolos artesanais. Visite nossa loja no centro da cidade.",
+    'Conheça o espaço acolhedor da Velvet Bolo em Curitiba. Ambiente moderno e elegante para degustar nossos bolos artesanais. Visite nossa loja no centro da cidade.',
   keywords:
-    "espaço Velvet Bolo, loja confeitaria Curitiba, ambiente acolhedor, confeitaria centro Curitiba, loja bolos artesanais, espaço gastronômico, confeitaria elegante, ambiente confeitaria, loja Velvet, confeitaria acolhedora, espaço para degustação, confeitaria moderna Curitiba",
+    'espaço Velvet Bolo, loja confeitaria Curitiba, ambiente acolhedor, confeitaria centro Curitiba, loja bolos artesanais, espaço gastronômico, confeitaria elegante, ambiente confeitaria, loja Velvet, confeitaria acolhedora, espaço para degustação, confeitaria moderna Curitiba',
   openGraph: {
-    title: "Nosso Espaço - Velvet Bolo Curitiba",
+    title: 'Nosso Espaço - Velvet Bolo Curitiba',
     description:
-      "Conheça o espaço acolhedor da Velvet Bolo em Curitiba. Ambiente moderno e elegante para degustar nossos bolos artesanais.",
+      'Conheça o espaço acolhedor da Velvet Bolo em Curitiba. Ambiente moderno e elegante para degustar nossos bolos artesanais.',
     images: [
-      "/assets/entrada-loja.jpg",
-      "/assets/velvet.jpg",
-      "/assets/bg-velvet.jpg",
+      '/assets/entrada-loja.jpg',
+      '/assets/velvet.jpg',
+      '/assets/bg-velvet.jpg',
     ],
   },
-};
+}
 
 export default function NossoEspacoPage() {
   const espacoImages = [
     {
       id: 1,
-      src: "/assets/entrada-loja.jpg",
-      alt: "Entrada da loja Velvet",
+      src: '/assets/entrada-loja.jpg',
+      alt: 'Entrada da loja Velvet',
       width: 800,
       height: 600,
     },
     {
       id: 2,
-      src: "/assets/velvet.jpg",
-      alt: "Fachada da loja Velvet",
+      src: '/assets/velvet.jpg',
+      alt: 'Fachada da loja Velvet',
       width: 800,
       height: 600,
     },
     {
       id: 3,
-      src: "/assets/bg-velvet.jpg",
-      alt: "Ambiente interno da loja",
+      src: '/assets/bg-velvet.jpg',
+      alt: 'Ambiente interno da loja',
       width: 800,
       height: 600,
     },
     {
       id: 4,
-      src: "/assets/bg-about.jpg",
-      alt: "Detalhes do espaço",
+      src: '/assets/bg-about.jpg',
+      alt: 'Detalhes do espaço',
       width: 800,
       height: 600,
     },
     {
       id: 5,
-      src: "/assets/bg-about-2.jpg",
-      alt: "Decoração da loja",
+      src: '/assets/bg-about-2.jpg',
+      alt: 'Decoração da loja',
       width: 800,
       height: 600,
     },
     {
       id: 6,
-      src: "/assets/bg-contact.jpg",
-      alt: "Área de atendimento",
+      src: '/assets/bg-contact.jpg',
+      alt: 'Área de atendimento',
       width: 800,
       height: 600,
     },
-  ];
+  ]
+
+  const heroImages = [
+    '/assets/entrada-loja.jpg',
+    '/assets/velvet.jpg',
+    '/assets/bg-velvet.jpg',
+    '/assets/bg-about.jpg',
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-brand-50 to-white">
@@ -86,55 +93,78 @@ export default function NossoEspacoPage() {
         </div>
       </div>
 
+      {/* Hero Image Gallery - Grid de imagens principais */}
+      <section className="py-16">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="mb-12 text-center text-3xl font-bold text-brand-800">
+            Bem-vindo ao Nosso Espaço
+          </h2>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {heroImages.map((image, index) => (
+              <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
+                <div className="aspect-[4/3] relative">
+                  <Image
+                    src={image}
+                    alt={`Espaço Velvet ${index + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-black/20 transition-opacity duration-300 group-hover:opacity-0" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Content Section */}
       <div className="mx-auto max-w-4xl px-6 py-16">
         <div className="mb-16 text-center">
-          <h2 className="mb-6 text-3xl font-bold text-brand-800">
-            Bem-vindo ao Velvet
+          <h2 className="text-3xl font-bold text-brand-800 mb-6">
+            Um Espaço Feito com Carinho
           </h2>
-          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-zinc-600">
-            Nossa loja é mais do que um simples estabelecimento - é um espaço
-            acolhedor onde cada detalhe foi pensado para proporcionar uma
-            experiência única. Localizada no coração da cidade, oferecemos um
-            ambiente moderno e elegante que combina perfeitamente com a
-            qualidade excepcional dos nossos bolos.
+          <p className="text-lg text-zinc-600 leading-relaxed max-w-3xl mx-auto">
+            Nossa loja é mais do que um simples estabelecimento - é um espaço acolhedor 
+            onde cada detalhe foi pensado para proporcionar uma experiência única. 
+            Localizada no coração da cidade, oferecemos um ambiente moderno e elegante 
+            que combina perfeitamente com a qualidade excepcional dos nossos bolos.
           </p>
         </div>
 
-        <div className="mb-16 grid gap-12 md:grid-cols-2">
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div>
-            <h3 className="mb-4 text-2xl font-semibold text-brand-700">
+            <h3 className="text-2xl font-semibold text-brand-700 mb-4">
               Ambiente Acolhedor
             </h3>
-            <p className="leading-relaxed text-zinc-600">
-              Nosso espaço foi projetado para ser acolhedor e convidativo, com
-              uma decoração que reflete a elegância e sofisticação dos nossos
-              produtos. Cada canto da loja foi cuidadosamente planejado para
-              criar uma atmosfera que faz nossos clientes se sentirem em casa.
+            <p className="text-zinc-600 leading-relaxed">
+              Nosso espaço foi projetado para ser acolhedor e convidativo, com uma 
+              decoração que reflete a elegância e sofisticação dos nossos produtos. 
+              Cada canto da loja foi cuidadosamente planejado para criar uma atmosfera 
+              que faz nossos clientes se sentirem em casa.
             </p>
           </div>
           <div>
-            <h3 className="mb-4 text-2xl font-semibold text-brand-700">
+            <h3 className="text-2xl font-semibold text-brand-700 mb-4">
               Atendimento Personalizado
             </h3>
-            <p className="leading-relaxed text-zinc-600">
-              Nossa equipe está sempre pronta para oferecer um atendimento
-              personalizado e atencioso. Queremos que cada visita seja uma
-              experiência memorável, onde você possa descobrir novos sabores e
-              encontrar o bolo perfeito para cada ocasião especial.
+            <p className="text-zinc-600 leading-relaxed">
+              Nossa equipe está sempre pronta para oferecer um atendimento personalizado 
+              e atencioso. Queremos que cada visita seja uma experiência memorável, 
+              onde você possa descobrir novos sabores e encontrar o bolo perfeito para 
+              cada ocasião especial.
             </p>
           </div>
         </div>
 
-        <div className="mb-16 text-center">
-          <h3 className="mb-6 text-2xl font-semibold text-brand-700">
+        <div className="text-center mb-16">
+          <h3 className="text-2xl font-semibold text-brand-700 mb-6">
             Venha nos Visitar
           </h3>
-          <p className="mx-auto max-w-2xl leading-relaxed text-zinc-600">
-            Estamos localizados em um local de fácil acesso, com estacionamento
-            conveniente e horários flexíveis para atender às suas necessidades.
-            Venha conhecer nosso espaço e se encantar com a atmosfera única do
-            Velvet.
+          <p className="text-zinc-600 leading-relaxed max-w-2xl mx-auto">
+            Estamos localizados em um local de fácil acesso, com estacionamento 
+            conveniente e horários flexíveis para atender às suas necessidades. 
+            Venha conhecer nosso espaço e se encantar com a atmosfera única do Velvet.
           </p>
         </div>
       </div>
@@ -142,12 +172,12 @@ export default function NossoEspacoPage() {
       {/* Photo Gallery */}
       <div className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="mb-12 text-center text-3xl font-bold text-brand-800">
-            Galeria do Nosso Espaço
+          <h2 className="text-3xl font-bold text-brand-800 text-center mb-12">
+            Galeria Completa do Nosso Espaço
           </h2>
           <ImageGallery images={espacoImages} />
         </div>
       </div>
     </div>
-  );
+  )
 }

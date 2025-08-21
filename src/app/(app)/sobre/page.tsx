@@ -1,21 +1,21 @@
-import type { Metadata } from "next";
-import Image from "next/image";
+import type { Metadata } from 'next'
+import Image from 'next/image'
 
-import ImageGallery from "@/components/image-gallery";
+import ImageGallery from '@/components/image-gallery'
 
 export const metadata: Metadata = {
-  title: "Sobre",
+  title: 'Sobre',
   description:
-    "Conheça a história da Velvet Bolo em Curitiba. Nossa confeitaria especializada em Red Velvet e bolos artesanais. Qualidade, tradição e amor em cada receita desde o início.",
+    'Conheça a história da Velvet Bolo em Curitiba. Nossa confeitaria especializada em Red Velvet e bolos artesanais. Qualidade, tradição e amor em cada receita desde o início.',
   keywords:
-    "história Velvet Bolo, confeitaria Curitiba, Red Velvet Curitiba, bolos artesanais, confeitaria artesanal, Isabel Badalotti, chef confeitaria, confeitaria tradicional, bolos sob encomenda, confeitaria centro Curitiba, bolos velvet, confeitaria de qualidade, tradição confeitaria, bolos artesanais Curitiba",
+    'história Velvet Bolo, confeitaria Curitiba, Red Velvet Curitiba, bolos artesanais, confeitaria artesanal, Isabel Badalotti, chef confeitaria, confeitaria tradicional, bolos sob encomenda, confeitaria centro Curitiba, bolos velvet, confeitaria de qualidade, tradição confeitaria, bolos artesanais Curitiba',
   openGraph: {
-    title: "Sobre a Velvet Bolo - História e Tradição em Curitiba",
+    title: 'Sobre a Velvet Bolo - História e Tradição em Curitiba',
     description:
-      "Conheça a história da Velvet Bolo em Curitiba. Nossa confeitaria especializada em Red Velvet e bolos artesanais com qualidade e tradição.",
-    images: ["/assets/dona.jpg", "/assets/bolo2.jpg"],
+      'Conheça a história da Velvet Bolo em Curitiba. Nossa confeitaria especializada em Red Velvet e bolos artesanais com qualidade e tradição.',
+    images: ['/assets/dona.jpg', '/assets/bolo2.jpg'],
   },
-};
+}
 
 export default function SobrePage() {
   return (
@@ -68,5 +68,5 @@ export default function SobrePage() {
         <ImageGallery />
       </div>
     </div>
-  );
+  )
 }
