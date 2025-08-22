@@ -148,7 +148,7 @@ export default function HomePage() {
                 id="conheca-espaco"
                 className="mb-6 text-4xl font-light text-brand-700 md:text-5xl"
               >
-                CONHEÇA NOSSO ESPAÇO
+                NOSSO ESPAÇO
               </h2>
               <p className="mb-6 max-w-[500px] text-lg leading-8 text-gray-700">
                 Venha conhecer pessoalmente o cantinho acolhedor da Velvet Bolo!
