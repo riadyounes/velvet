@@ -165,7 +165,7 @@ export default function NossosBolosPage() {
               </div>
               <Button className="bg-green-600 text-white hover:bg-green-700">
                 <a
-                  href="https://wa.me/5541999999999?text=Olá! Gostaria de saber quais bolos estão disponíveis hoje para pronta entrega na Velvet Bolo."
+                  href="https://wa.me/554199422377?text=Olá! Gostaria de saber quais bolos estão disponíveis hoje para pronta entrega na Velvet Bolo."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center"
@@ -205,7 +205,7 @@ export default function NossosBolosPage() {
               </div>
               <Button className="bg-blue-600 text-white hover:bg-blue-700">
                 <a
-                  href="https://wa.me/5541999999999?text=Olá! Gostaria de fazer uma encomenda na Velvet Bolo. Pode me ajudar?"
+                  href="https://wa.me/554199422377?text=Olá! Gostaria de fazer uma encomenda na Velvet Bolo. Pode me ajudar?"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center"
