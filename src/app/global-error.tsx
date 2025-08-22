@@ -73,7 +73,8 @@ export default function GlobalError({
               <div className="space-y-2 text-sm text-zinc-600">
                 <p>📱 WhatsApp: (41) 9942-2377</p>
                 <p>📍 Centro, Curitiba - PR</p>
-                <p>🕒 Segunda a Sábado, 9h às 18h</p>
+                <p>🕒 Segunda a Sexta, 11h às 19h</p>
+                <p>🕒 Sábado, 11h às 18h</p>
               </div>
             </div>
 
