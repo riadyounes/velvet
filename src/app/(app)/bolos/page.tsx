@@ -164,7 +164,14 @@ export default function NossosBolosPage() {
                 </Badge>
               </div>
               <Button className="bg-green-600 text-white hover:bg-green-700">
-                Ver Disponibilidade
+                <a
+                  href="https://wa.me/5541999999999?text=Olá! Gostaria de saber quais bolos estão disponíveis hoje para pronta entrega na Velvet Bolo."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  Ver Disponibilidade
+                </a>
               </Button>
             </CardContent>
           </Card>
@@ -197,7 +204,14 @@ export default function NossosBolosPage() {
                 </Badge>
               </div>
               <Button className="bg-blue-600 text-white hover:bg-blue-700">
-                Fazer Encomenda
+                <a
+                  href="https://wa.me/5541999999999?text=Olá! Gostaria de fazer uma encomenda na Velvet Bolo. Pode me ajudar?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  Fazer Encomenda
+                </a>
               </Button>
             </CardContent>
           </Card>
