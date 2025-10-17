@@ -236,8 +236,15 @@ export default function NossosBolosPage() {
             size="lg"
             className="bg-brand-600 text-white hover:bg-brand-700"
           >
-            <ExternalLink className="mr-2 h-5 w-5" />
-            Conferir Cardápio Completo
+            <a
+              href="https://velvet.goomer.app/menu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              <ExternalLink className="mr-2 h-5 w-5" />
+              Conferir Cardápio Completo
+            </a>
           </Button>
         </section>
       </div>
